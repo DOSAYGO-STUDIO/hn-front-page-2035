@@ -23,11 +23,14 @@
     .pagetop a:visited { color: #000000; }
     .pagetop a { margin-right: 2px; }
     .hnname { margin-right: 10px; font-weight: bold; }
+    
+    /* UPDATED: Crisp SVG Arrow */
     .votearrow { 
         width: 10px; height: 10px; border: 0px; margin: 3px 2px 6px; 
-        background: url("data:image/gif;base64,R0lGODlhCgAKALMPAAAAAIAAAACAAICAAAABgIAAgACAgICAgA/wD/8AAAB//8AA/wD//wD//////wAAACH5BAEAAA8ALAAAAAAKAAoAAAQRsMlJq7046827/2AomkXRgQA7") no-repeat;
-        filter: contrast(50%); /* rough approx for the gray arrow */
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M5 0L10 10H0Z" fill="%23828282"/></svg>');
+        background-repeat: no-repeat;
     }
+
     .spacer { height: 5px !important; }
     .rank { font-size: 10pt; color: #828282; text-align: right; padding-right: 5px; }
     .more { padding-top: 10px; padding-left: 15px; }
@@ -56,7 +59,7 @@
                     </td>
                     <td style="text-align:right; padding-right:4px;">
                         <span class="pagetop">
-                            <a href="login">login</a>
+                            <a href="login?goto=news">login</a>
                         </span>
                     </td>
                 </tr>
@@ -68,421 +71,421 @@
         <td>
             <table border="0" cellpadding="0" cellspacing="0" class="itemlist">
                 <!-- Item 1 -->
-                <tr class="athing">
+                <tr class="athing" id="90100001">
                     <td align="right" valign="top" class="title"><span class="rank">1.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">First successful telemetry from Starship HLS-9 on the Sea of Tranquility</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">spacex.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90100001&how=up&auth=d7f2a1b9"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.spacex.com/updates/2035/starship-hls-9-tranquility-telemetry/">First successful telemetry from Starship HLS-9 on the Sea of Tranquility</a> <span class="sitebit comhead"> (<a href="from?site=spacex.com"><span class="sitestr">spacex.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">894 points</span> by <a href="#" class="hnuser">muskwatch</a> <span class="age"><a href="#">4 hours ago</a></span> | <a href="#">hide</a> | <a href="#">312 comments</a>
+                        <span class="score">894 points</span> by <a href="user?id=muskwatch" class="hnuser">muskwatch</a> <span class="age"><a href="item?id=90100001">4 hours ago</a></span> | <a href="hide?id=90100001&goto=news">hide</a> | <a href="item?id=90100001">312 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 2 -->
-                <tr class="athing">
+                <tr class="athing" id="90100045">
                     <td align="right" valign="top" class="title"><span class="rank">2.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">A 100% Rust kernel is now upstream in Linux 7.4</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">kernel.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90100045&how=up&auth=e1c8d4f2"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?h=v7.4-rust">A 100% Rust kernel is now upstream in Linux 7.4</a> <span class="sitebit comhead"> (<a href="from?site=kernel.org"><span class="sitestr">kernel.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">402 points</span> by <a href="#" class="hnuser">rust_evangelist</a> <span class="age"><a href="#">6 hours ago</a></span> | <a href="#">hide</a> | <a href="#">156 comments</a>
+                        <span class="score">402 points</span> by <a href="user?id=rust_evangelist" class="hnuser">rust_evangelist</a> <span class="age"><a href="item?id=90100045">6 hours ago</a></span> | <a href="hide?id=90100045&goto=news">hide</a> | <a href="item?id=90100045">156 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 3 -->
-                <tr class="athing">
+                <tr class="athing" id="90099890">
                     <td align="right" valign="top" class="title"><span class="rank">3.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Why I still write raw code instead of prompting the compiler</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">nostalgic-coder.io</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099890&how=up&auth=a2b3c4d5"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://nostalgic-coder.io/blog/2035/why-i-still-write-raw-code">Why I still write raw code instead of prompting the compiler</a> <span class="sitebit comhead"> (<a href="from?site=nostalgic-coder.io"><span class="sitestr">nostalgic-coder.io</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">128 points</span> by <a href="#" class="hnuser">oldtimer99</a> <span class="age"><a href="#">3 hours ago</a></span> | <a href="#">hide</a> | <a href="#">89 comments</a>
+                        <span class="score">128 points</span> by <a href="user?id=oldtimer99" class="hnuser">oldtimer99</a> <span class="age"><a href="item?id=90099890">3 hours ago</a></span> | <a href="hide?id=90099890&goto=news">hide</a> | <a href="item?id=90099890">89 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 4 -->
-                <tr class="athing">
+                <tr class="athing" id="90100123">
                     <td align="right" valign="top" class="title"><span class="rank">4.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Running LLaMA-12 7B on a contact lens with WASM</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">arxiv.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90100123&how=up&auth=f9e8d7c6"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://arxiv.org/abs/3512.08842">Running LLaMA-12 7B on a contact lens with WASM</a> <span class="sitebit comhead"> (<a href="from?site=arxiv.org"><span class="sitestr">arxiv.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">67 points</span> by <a href="#" class="hnuser">edge_compute</a> <span class="age"><a href="#">2 hours ago</a></span> | <a href="#">hide</a> | <a href="#">14 comments</a>
+                        <span class="score">67 points</span> by <a href="user?id=edge_compute" class="hnuser">edge_compute</a> <span class="age"><a href="item?id=90100123">2 hours ago</a></span> | <a href="hide?id=90100123&goto=news">hide</a> | <a href="item?id=90100123">14 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 5 -->
-                <tr class="athing">
+                <tr class="athing" id="90099999">
                     <td align="right" valign="top" class="title"><span class="rank">5.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Show HN: AlgoDrill – Interactive drills to stop forgetting LeetCode patterns</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">algodrill.io</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099999&how=up&auth=b5a6c7d8"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://algodrill.io/drills/patterns/dynamic-programming-4d">Show HN: AlgoDrill – Interactive drills to stop forgetting LeetCode patterns</a> <span class="sitebit comhead"> (<a href="from?site=algodrill.io"><span class="sitestr">algodrill.io</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">243 points</span> by <a href="#" class="hnuser">persistence_is_key</a> <span class="age"><a href="#">5 hours ago</a></span> | <a href="#">hide</a> | <a href="#">98 comments</a>
+                        <span class="score">243 points</span> by <a href="user?id=persistence_is_key" class="hnuser">persistence_is_key</a> <span class="age"><a href="item?id=90099999">5 hours ago</a></span> | <a href="hide?id=90099999&goto=news">hide</a> | <a href="item?id=90099999">98 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 6 -->
-                <tr class="athing">
+                <tr class="athing" id="90098000">
                     <td align="right" valign="top" class="title"><span class="rank">6.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">ITER achieves net positive energy for 20 consecutive minutes</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">nature.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098000&how=up&auth=k1l2m3n4"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.nature.com/articles/s41586-035-01928-z-fusion-breakthrough">ITER achieves net positive energy for 20 consecutive minutes</a> <span class="sitebit comhead"> (<a href="from?site=nature.com"><span class="sitestr">nature.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">1205 points</span> by <a href="#" class="hnuser">physics_lover</a> <span class="age"><a href="#">12 hours ago</a></span> | <a href="#">hide</a> | <a href="#">402 comments</a>
+                        <span class="score">1205 points</span> by <a href="user?id=physics_lover" class="hnuser">physics_lover</a> <span class="age"><a href="item?id=90098000">12 hours ago</a></span> | <a href="hide?id=90098000&goto=news">hide</a> | <a href="item?id=90098000">402 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 7 -->
-                <tr class="athing">
+                <tr class="athing" id="90100005">
                     <td align="right" valign="top" class="title"><span class="rank">7.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Restoring a 2024 Framework Laptop: A retrospective</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">ifixit.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90100005&how=up&auth=q5w6e7r8"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.ifixit.com/News/98212/framework-2024-retrospective-repair">Restoring a 2024 Framework Laptop: A retrospective</a> <span class="sitebit comhead"> (<a href="from?site=ifixit.com"><span class="sitestr">ifixit.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">56 points</span> by <a href="#" class="hnuser">retro_fix</a> <span class="age"><a href="#">4 hours ago</a></span> | <a href="#">hide</a> | <a href="#">22 comments</a>
+                        <span class="score">56 points</span> by <a href="user?id=retro_fix" class="hnuser">retro_fix</a> <span class="age"><a href="item?id=90100005">4 hours ago</a></span> | <a href="hide?id=90100005&goto=news">hide</a> | <a href="item?id=90100005">22 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 8 -->
-                <tr class="athing">
+                <tr class="athing" id="90099555">
                     <td align="right" valign="top" class="title"><span class="rank">8.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Google kills Gemini Cloud Services</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">killedbygoogle.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099555&how=up&auth=t9y8u7i6"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://killedbygoogle.com/cemetery/gemini-cloud">Google kills Gemini Cloud Services</a> <span class="sitebit comhead"> (<a href="from?site=killedbygoogle.com"><span class="sitestr">killedbygoogle.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">530 points</span> by <a href="#" class="hnuser">dang_fan</a> <span class="age"><a href="#">15 hours ago</a></span> | <a href="#">hide</a> | <a href="#">330 comments</a>
+                        <span class="score">530 points</span> by <a href="user?id=dang_fan" class="hnuser">dang_fan</a> <span class="age"><a href="item?id=90099555">15 hours ago</a></span> | <a href="hide?id=90099555&goto=news">hide</a> | <a href="item?id=90099555">330 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 9 -->
-                <tr class="athing">
+                <tr class="athing" id="90099800">
                     <td align="right" valign="top" class="title"><span class="rank">9.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Visualizing the 5th dimension with WebGPU 2.0</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">graphics-shader.net</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099800&how=up&auth=o1p2a3s4"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://graphics-shader.net/examples/webgpu2/5d-tesseract">Visualizing the 5th dimension with WebGPU 2.0</a> <span class="sitebit comhead"> (<a href="from?site=graphics-shader.net"><span class="sitestr">graphics-shader.net</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">88 points</span> by <a href="#" class="hnuser">webgl_wizard</a> <span class="age"><a href="#">7 hours ago</a></span> | <a href="#">hide</a> | <a href="#">12 comments</a>
+                        <span class="score">88 points</span> by <a href="user?id=webgl_wizard" class="hnuser">webgl_wizard</a> <span class="age"><a href="item?id=90099800">7 hours ago</a></span> | <a href="hide?id=90099800&goto=news">hide</a> | <a href="item?id=90099800">12 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 10 -->
-                <tr class="athing">
+                <tr class="athing" id="90099010">
                     <td align="right" valign="top" class="title"><span class="rank">10.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Launch HN: Nia (YC W36) – Give context to autonomous coding agents</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">trynia.ai</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099010&how=up&auth=d5f6g7h8"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://trynia.ai/launch-hn-context-agents">Launch HN: Nia (YC W36) – Give context to autonomous coding agents</a> <span class="sitebit comhead"> (<a href="from?site=trynia.ai"><span class="sitestr">trynia.ai</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">112 points</span> by <a href="#" class="hnuser">founder_jane</a> <span class="age"><a href="#">10 hours ago</a></span> | <a href="#">hide</a> | <a href="#">45 comments</a>
+                        <span class="score">112 points</span> by <a href="user?id=founder_jane" class="hnuser">founder_jane</a> <span class="age"><a href="item?id=90099010">10 hours ago</a></span> | <a href="hide?id=90099010&goto=news">hide</a> | <a href="item?id=90099010">45 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 11 -->
-                <tr class="athing">
+                <tr class="athing" id="90099222">
                     <td align="right" valign="top" class="title"><span class="rank">11.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Debian 18 "Trixie" released</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">debian.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099222&how=up&auth=j9k0l1z2"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.debian.org/News/2035/20351208">Debian 18 "Trixie" released</a> <span class="sitebit comhead"> (<a href="from?site=debian.org"><span class="sitestr">debian.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">312 points</span> by <a href="#" class="hnuser">apt_get</a> <span class="age"><a href="#">14 hours ago</a></span> | <a href="#">hide</a> | <a href="#">78 comments</a>
+                        <span class="score">312 points</span> by <a href="user?id=apt_get" class="hnuser">apt_get</a> <span class="age"><a href="item?id=90099222">14 hours ago</a></span> | <a href="hide?id=90099222&goto=news">hide</a> | <a href="item?id=90099222">78 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 12 -->
-                <tr class="athing">
+                <tr class="athing" id="90100066">
                     <td align="right" valign="top" class="title"><span class="rank">12.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Is it time to rewrite sudo in Zig?</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">github.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90100066&how=up&auth=x3c4v5b6"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://github.com/sudo-project/sudo/discussions/rewrite-zig">Is it time to rewrite sudo in Zig?</a> <span class="sitebit comhead"> (<a href="from?site=github.com"><span class="sitestr">github.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">45 points</span> by <a href="#" class="hnuser">ziggy42</a> <span class="age"><a href="#">3 hours ago</a></span> | <a href="#">hide</a> | <a href="#">60 comments</a>
+                        <span class="score">45 points</span> by <a href="user?id=ziggy42" class="hnuser">ziggy42</a> <span class="age"><a href="item?id=90100066">3 hours ago</a></span> | <a href="hide?id=90100066&goto=news">hide</a> | <a href="item?id=90100066">60 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 13 -->
-                <tr class="athing">
+                <tr class="athing" id="90098555">
                     <td align="right" valign="top" class="title"><span class="rank">13.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">EU passes "Right to Human Verification" Act</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">europa.eu</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098555&how=up&auth=n7m8q9w0"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_35_1234">EU passes "Right to Human Verification" Act</a> <span class="sitebit comhead"> (<a href="from?site=europa.eu"><span class="sitestr">europa.eu</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">670 points</span> by <a href="#" class="hnuser">policy_wonk</a> <span class="age"><a href="#">1 day ago</a></span> | <a href="#">hide</a> | <a href="#">290 comments</a>
+                        <span class="score">670 points</span> by <a href="user?id=policy_wonk" class="hnuser">policy_wonk</a> <span class="age"><a href="item?id=90098555">1 day ago</a></span> | <a href="hide?id=90098555&goto=news">hide</a> | <a href="item?id=90098555">290 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 14 -->
-                <tr class="athing">
+                <tr class="athing" id="90099777">
                     <td align="right" valign="top" class="title"><span class="rank">14.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Reverse Engineering the Neuralink V4 Bluetooth Protocol</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">brain-hacks.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099777&how=up&auth=r1t2y3u4"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://brain-hacks.org/2035/12/08/reversing-neuralink-v4-bluetooth">Reverse Engineering the Neuralink V4 Bluetooth Protocol</a> <span class="sitebit comhead"> (<a href="from?site=brain-hacks.org"><span class="sitestr">brain-hacks.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">220 points</span> by <a href="#" class="hnuser">cyborg_sec</a> <span class="age"><a href="#">8 hours ago</a></span> | <a href="#">hide</a> | <a href="#">55 comments</a>
+                        <span class="score">220 points</span> by <a href="user?id=cyborg_sec" class="hnuser">cyborg_sec</a> <span class="age"><a href="item?id=90099777">8 hours ago</a></span> | <a href="hide?id=90099777&goto=news">hide</a> | <a href="item?id=90099777">55 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 15 -->
-                <tr class="athing">
+                <tr class="athing" id="90099812">
                     <td align="right" valign="top" class="title"><span class="rank">15.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Post-Silicon Computing: An Intro to Photonic Circuits</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">mit.edu</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099812&how=up&auth=i5o6p7a8"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://news.mit.edu/2035/intro-to-photonic-circuits">Post-Silicon Computing: An Intro to Photonic Circuits</a> <span class="sitebit comhead"> (<a href="from?site=mit.edu"><span class="sitestr">mit.edu</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">99 points</span> by <a href="#" class="hnuser">lightspeed</a> <span class="age"><a href="#">6 hours ago</a></span> | <a href="#">hide</a> | <a href="#">18 comments</a>
+                        <span class="score">99 points</span> by <a href="user?id=lightspeed" class="hnuser">lightspeed</a> <span class="age"><a href="item?id=90099812">6 hours ago</a></span> | <a href="hide?id=90099812&goto=news">hide</a> | <a href="item?id=90099812">18 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 16 -->
-                <tr class="athing">
+                <tr class="athing" id="90098123">
                     <td align="right" valign="top" class="title"><span class="rank">16.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">FDA approves over-the-counter CRISPR for lactose intolerance</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">fda.gov</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098123&how=up&auth=s9d0f1g2"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.fda.gov/news/2035/crispr-lactose-approval">FDA approves over-the-counter CRISPR for lactose intolerance</a> <span class="sitebit comhead"> (<a href="from?site=fda.gov"><span class="sitestr">fda.gov</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">415 points</span> by <a href="#" class="hnuser">bio_hacker</a> <span class="age"><a href="#">16 hours ago</a></span> | <a href="#">hide</a> | <a href="#">211 comments</a>
+                        <span class="score">415 points</span> by <a href="user?id=bio_hacker" class="hnuser">bio_hacker</a> <span class="age"><a href="item?id=90098123">16 hours ago</a></span> | <a href="hide?id=90098123&goto=news">hide</a> | <a href="item?id=90098123">211 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 17 -->
-                <tr class="athing">
+                <tr class="athing" id="90098234">
                     <td align="right" valign="top" class="title"><span class="rank">17.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">SQLite 4.0 Release Notes</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">sqlite.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098234&how=up&auth=h3j4k5l6"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://sqlite.org/releaselog/4_0_0.html">SQLite 4.0 Release Notes</a> <span class="sitebit comhead"> (<a href="from?site=sqlite.org"><span class="sitestr">sqlite.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">800 points</span> by <a href="#" class="hnuser">drh</a> <span class="age"><a href="#">20 hours ago</a></span> | <a href="#">hide</a> | <a href="#">140 comments</a>
+                        <span class="score">800 points</span> by <a href="user?id=drh" class="hnuser">drh</a> <span class="age"><a href="item?id=90098234">20 hours ago</a></span> | <a href="hide?id=90098234&goto=news">hide</a> | <a href="item?id=90098234">140 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 18 -->
-                <tr class="athing">
+                <tr class="athing" id="90099456">
                     <td align="right" valign="top" class="title"><span class="rank">18.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Ask HN: How do you prevent ad-injection in AR glasses?</a></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099456&how=up&auth=z7x8c9v0"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="item?id=90099456">Ask HN: How do you prevent ad-injection in AR glasses?</a></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">320 points</span> by <a href="#" class="hnuser">glasshole2</a> <span class="age"><a href="#">11 hours ago</a></span> | <a href="#">hide</a> | <a href="#">102 comments</a>
+                        <span class="score">320 points</span> by <a href="user?id=glasshole2" class="hnuser">glasshole2</a> <span class="age"><a href="item?id=90099456">11 hours ago</a></span> | <a href="hide?id=90099456&goto=news">hide</a> | <a href="item?id=90099456">102 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 19 -->
-                <tr class="athing">
+                <tr class="athing" id="90099678">
                     <td align="right" valign="top" class="title"><span class="rank">19.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Jepsen: NATS 4.2 (Still losing messages?)</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">jepsen.io</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099678&how=up&auth=b1n2m3q4"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://jepsen.io/analyses/nats-4.2">Jepsen: NATS 4.2 (Still losing messages?)</a> <span class="sitebit comhead"> (<a href="from?site=jepsen.io"><span class="sitestr">jepsen.io</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">88 points</span> by <a href="#" class="hnuser">aphyr_bot</a> <span class="age"><a href="#">9 hours ago</a></span> | <a href="#">hide</a> | <a href="#">33 comments</a>
+                        <span class="score">88 points</span> by <a href="user?id=aphyr_bot" class="hnuser">aphyr_bot</a> <span class="age"><a href="item?id=90099678">9 hours ago</a></span> | <a href="hide?id=90099678&goto=news">hide</a> | <a href="item?id=90099678">33 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 20 -->
-                <tr class="athing">
+                <tr class="athing" id="90100099">
                     <td align="right" valign="top" class="title"><span class="rank">20.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Playing GTA VI on a RISC-V Cluster</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">youtube.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90100099&how=up&auth=w5e6r7t8"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.youtube.com/watch?v=riscv_gta6_demo">Playing GTA VI on a RISC-V Cluster</a> <span class="sitebit comhead"> (<a href="from?site=youtube.com"><span class="sitestr">youtube.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">45 points</span> by <a href="#" class="hnuser">tlyleung</a> <span class="age"><a href="#">2 hours ago</a></span> | <a href="#">hide</a> | <a href="#">16 comments</a>
+                        <span class="score">45 points</span> by <a href="user?id=tlyleung" class="hnuser">tlyleung</a> <span class="age"><a href="item?id=90100099">2 hours ago</a></span> | <a href="hide?id=90100099&goto=news">hide</a> | <a href="item?id=90100099">16 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 21 -->
-                <tr class="athing">
+                <tr class="athing" id="90099888">
                     <td align="right" valign="top" class="title"><span class="rank">21.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Why functional programming is the future (again)</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">haskell.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099888&how=up&auth=y9u0i1o2"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.haskell.org/blog/2035/why-fp-future-again">Why functional programming is the future (again)</a> <span class="sitebit comhead"> (<a href="from?site=haskell.org"><span class="sitestr">haskell.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">102 points</span> by <a href="#" class="hnuser">monad_lover</a> <span class="age"><a href="#">7 hours ago</a></span> | <a href="#">hide</a> | <a href="#">65 comments</a>
+                        <span class="score">102 points</span> by <a href="user?id=monad_lover" class="hnuser">monad_lover</a> <span class="age"><a href="item?id=90099888">7 hours ago</a></span> | <a href="hide?id=90099888&goto=news">hide</a> | <a href="item?id=90099888">65 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 22 -->
-                <tr class="athing">
+                <tr class="athing" id="90097777">
                     <td align="right" valign="top" class="title"><span class="rank">22.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Microsoft Office 365 prices increase to $40/user/month</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">officewatch.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90097777&how=up&auth=p3a4s5d6"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://officewatch.com/2035/microsoft-365-price-hike-40">Microsoft Office 365 prices increase to $40/user/month</a> <span class="sitebit comhead"> (<a href="from?site=officewatch.com"><span class="sitestr">officewatch.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">900 points</span> by <a href="#" class="hnuser">taubek</a> <span class="age"><a href="#">1 day ago</a></span> | <a href="#">hide</a> | <a href="#">600 comments</a>
+                        <span class="score">900 points</span> by <a href="user?id=taubek" class="hnuser">taubek</a> <span class="age"><a href="item?id=90097777">1 day ago</a></span> | <a href="hide?id=90097777&goto=news">hide</a> | <a href="item?id=90097777">600 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 23 -->
-                <tr class="athing">
+                <tr class="athing" id="90098888">
                     <td align="right" valign="top" class="title"><span class="rank">23.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Emulating Windows 10 in the browser</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">bellard.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098888&how=up&auth=f7g8h9j0"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://bellard.org/jslinux/win10-emu.html">Emulating Windows 10 in the browser</a> <span class="sitebit comhead"> (<a href="from?site=bellard.org"><span class="sitestr">bellard.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">341 points</span> by <a href="#" class="hnuser">qemu_fan</a> <span class="age"><a href="#">19 hours ago</a></span> | <a href="#">hide</a> | <a href="#">50 comments</a>
+                        <span class="score">341 points</span> by <a href="user?id=qemu_fan" class="hnuser">qemu_fan</a> <span class="age"><a href="item?id=90098888">19 hours ago</a></span> | <a href="hide?id=90098888&goto=news">hide</a> | <a href="item?id=90098888">50 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 24 -->
-                <tr class="athing">
+                <tr class="athing" id="90098765">
                     <td align="right" valign="top" class="title"><span class="rank">24.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Let's put Tailscale on a SpaceX Starlink Dish</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">tailscale.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098765&how=up&auth=k1l2z3x4"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://tailscale.com/blog/starlink-dish-mesh">Let's put Tailscale on a SpaceX Starlink Dish</a> <span class="sitebit comhead"> (<a href="from?site=tailscale.com"><span class="sitestr">tailscale.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">250 points</span> by <a href="#" class="hnuser">net_hacker</a> <span class="age"><a href="#">20 hours ago</a></span> | <a href="#">hide</a> | <a href="#">45 comments</a>
+                        <span class="score">250 points</span> by <a href="user?id=net_hacker" class="hnuser">net_hacker</a> <span class="age"><a href="item?id=90098765">20 hours ago</a></span> | <a href="hide?id=90098765&goto=news">hide</a> | <a href="item?id=90098765">45 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 25 -->
-                <tr class="athing">
+                <tr class="athing" id="90098654">
                     <td align="right" valign="top" class="title"><span class="rank">25.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Manual: Deep Fakes detection for Seniors</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">aarp.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098654&how=up&auth=c5v6b7n8"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.aarp.org/technology/deep-fakes-seniors-manual.html">Manual: Deep Fakes detection for Seniors</a> <span class="sitebit comhead"> (<a href="from?site=aarp.org"><span class="sitestr">aarp.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">122 points</span> by <a href="#" class="hnuser">concerned_grandson</a> <span class="age"><a href="#">21 hours ago</a></span> | <a href="#">hide</a> | <a href="#">77 comments</a>
+                        <span class="score">122 points</span> by <a href="user?id=concerned_grandson" class="hnuser">concerned_grandson</a> <span class="age"><a href="item?id=90098654">21 hours ago</a></span> | <a href="hide?id=90098654&goto=news">hide</a> | <a href="item?id=90098654">77 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 26 -->
-                <tr class="athing">
+                <tr class="athing" id="90097654">
                     <td align="right" valign="top" class="title"><span class="rank">26.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">IBM to acquire OpenAI (Rumor)</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">bloomberg.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90097654&how=up&auth=m9q0w1e2"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://www.bloomberg.com/news/articles/2035-12-08/ibm-rumored-to-acquire-openai">IBM to acquire OpenAI (Rumor)</a> <span class="sitebit comhead"> (<a href="from?site=bloomberg.com"><span class="sitestr">bloomberg.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">120 points</span> by <a href="#" class="hnuser">stock_watcher</a> <span class="age"><a href="#">1 day ago</a></span> | <a href="#">hide</a> | <a href="#">338 comments</a>
+                        <span class="score">120 points</span> by <a href="user?id=stock_watcher" class="hnuser">stock_watcher</a> <span class="age"><a href="item?id=90097654">1 day ago</a></span> | <a href="hide?id=90097654&goto=news">hide</a> | <a href="item?id=90097654">338 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 27 -->
-                <tr class="athing">
+                <tr class="athing" id="90098999">
                     <td align="right" valign="top" class="title"><span class="rank">27.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">The unexpected return of server-side rendering</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">htmx.org</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098999&how=up&auth=r3t4y5u6"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://htmx.org/essays/unexpected-return-ssr-2035/">The unexpected return of server-side rendering</a> <span class="sitebit comhead"> (<a href="from?site=htmx.org"><span class="sitestr">htmx.org</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">147 points</span> by <a href="#" class="hnuser">bikenaga</a> <span class="age"><a href="#">19 hours ago</a></span> | <a href="#">hide</a> | <a href="#">48 comments</a>
+                        <span class="score">147 points</span> by <a href="user?id=bikenaga" class="hnuser">bikenaga</a> <span class="age"><a href="item?id=90098999">19 hours ago</a></span> | <a href="hide?id=90098999&goto=news">hide</a> | <a href="item?id=90098999">48 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 28 -->
-                <tr class="athing">
+                <tr class="athing" id="90098444">
                     <td align="right" valign="top" class="title"><span class="rank">28.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">How to build a Faraday Cage for your bedroom</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">privacy-first.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098444&how=up&auth=i7o8p9a0"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://privacy-first.com/guides/bedroom-faraday-cage">How to build a Faraday Cage for your bedroom</a> <span class="sitebit comhead"> (<a href="from?site=privacy-first.com"><span class="sitestr">privacy-first.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">267 points</span> by <a href="#" class="hnuser">tinfoil_hat</a> <span class="age"><a href="#">22 hours ago</a></span> | <a href="#">hide</a> | <a href="#">49 comments</a>
+                        <span class="score">267 points</span> by <a href="user?id=tinfoil_hat" class="hnuser">tinfoil_hat</a> <span class="age"><a href="item?id=90098444">22 hours ago</a></span> | <a href="hide?id=90098444&goto=news">hide</a> | <a href="item?id=90098444">49 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 29 -->
-                <tr class="athing">
+                <tr class="athing" id="90099333">
                     <td align="right" valign="top" class="title"><span class="rank">29.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">AI progress is stalling. Human equivalence was a mirage</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">garymarcus.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90099333&how=up&auth=s1d2f3g4"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://garymarcus.com/blog/2035/ai-stalling-mirage">AI progress is stalling. Human equivalence was a mirage</a> <span class="sitebit comhead"> (<a href="from?site=garymarcus.com"><span class="sitestr">garymarcus.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">485 points</span> by <a href="#" class="hnuser">skeptic_ai</a> <span class="age"><a href="#">14 hours ago</a></span> | <a href="#">hide</a> | <a href="#">416 comments</a>
+                        <span class="score">485 points</span> by <a href="user?id=skeptic_ai" class="hnuser">skeptic_ai</a> <span class="age"><a href="item?id=90099333">14 hours ago</a></span> | <a href="hide?id=90099333&goto=news">hide</a> | <a href="item?id=90099333">416 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:5px"></tr>
 
                 <!-- Item 30 -->
-                <tr class="athing">
+                <tr class="athing" id="90098800">
                     <td align="right" valign="top" class="title"><span class="rank">30.</span></td>
-                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
-                    <td class="title"><a href="#">Show HN: A text editor that doesn't use AI</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">github.com</span></a>)</span></td>
+                    <td valign="top" class="votelinks"><center><a href="vote?id=90098800&how=up&auth=h5j6k7l8"><div class="votearrow" title="upvote"></div></a></center></td>
+                    <td class="title"><a href="https://github.com/pure-coder/no-ai-editor">Show HN: A text editor that doesn't use AI</a> <span class="sitebit comhead"> (<a href="from?site=github.com"><span class="sitestr">github.com</span></a>)</span></td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
                     <td class="subtext">
-                        <span class="score">270 points</span> by <a href="#" class="hnuser">pure_coder</a> <span class="age"><a href="#">22 hours ago</a></span> | <a href="#">hide</a> | <a href="#">105 comments</a>
+                        <span class="score">270 points</span> by <a href="user?id=pure_coder" class="hnuser">pure_coder</a> <span class="age"><a href="item?id=90098800">22 hours ago</a></span> | <a href="hide?id=90098800&goto=news">hide</a> | <a href="item?id=90098800">105 comments</a>
                     </td>
                 </tr>
                 <tr class="spacer" style="height:10px"></tr>
@@ -502,14 +505,14 @@
             <br>
             <center>
                 <span class="yclinks">
-                    <a href="#">Guidelines</a>
-                    | <a href="#">FAQ</a>
-                    | <a href="#">Lists</a>
-                    | <a href="#">API</a>
-                    | <a href="#">Security</a>
-                    | <a href="#">Legal</a>
-                    | <a href="#">Apply to YC</a>
-                    | <a href="#">Contact</a>
+                    <a href="newsguidelines.html">Guidelines</a>
+                    | <a href="newsfaq.html">FAQ</a>
+                    | <a href="lists">Lists</a>
+                    | <a href="https://github.com/HackerNews/API">API</a>
+                    | <a href="security.html">Security</a>
+                    | <a href="legal.html">Legal</a>
+                    | <a href="https://www.ycombinator.com/apply/">Apply to YC</a>
+                    | <a href="mailto:hn@ycombinator.com">Contact</a>
                 </span>
                 <br><br>
                 <form method="get" action="//hn.algolia.com/">
