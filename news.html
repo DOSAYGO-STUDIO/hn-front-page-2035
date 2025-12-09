@@ -521,5 +521,39 @@
     </tr>
 </table>
 </center>
+    <script>
+document.addEventListener('click', function(e) {
+    // Check if the clicked element is a link or inside a link
+    var link = e.target.closest('a');
+    
+    // If it's not a link, do nothing
+    if (!link) return;
+
+    // Prevent the link from actually navigating
+    e.preventDefault();
+
+    // Set the dates
+    var now = new Date();
+    var targetDate = new Date(2035, 11, 9); // Months are 0-indexed (11 = Dec)
+
+    // Normalize timestamps to midnight to compare just the calendar day
+    var todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+    var targetMidnight = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate()).getTime();
+
+    // Format the dates nicely (e.g., "Tuesday, December 9, 2025")
+    var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var nowString = now.toLocaleDateString('en-US', dateOptions);
+    var targetString = targetDate.toLocaleDateString('en-US', dateOptions);
+
+    // Determine which message to show
+    if (todayMidnight < targetMidnight) {
+        alert("Sorry, this is " + nowString + ". You have not yet arrived at " + targetString + ". This is not a time portal, not yet!");
+    } else if (todayMidnight === targetMidnight) {
+        alert("You have arrived at the future! What does the page look like compared to the real one?");
+    } else {
+        alert("You are now in the future's future. Congrats! How does it feel? :)");
+    }
+});
+</script>
 </body>
 </html>
