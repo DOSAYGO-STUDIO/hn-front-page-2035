@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="referrer" content="origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hacker News</title>
+<style>
+    body { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #828282; margin: 0; padding: 0; background-color: #f6f6ef; }
+    table { border-collapse: collapse; }
+    td { padding: 0; }
+    a:link { color: #000000; text-decoration: none; }
+    a:visited { color: #828282; text-decoration: none; }
+    .default { font-size: 10pt; }
+    .admin { font-family: Verdana, Geneva, sans-serif; font-size: 8.5pt; color: #000000; }
+    .title { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #828282; overflow: hidden; }
+    .subtext { font-family: Verdana, Geneva, sans-serif; font-size: 7pt; color: #828282; }
+    .subtext a:link, .subtext a:visited { color: #828282; text-decoration: none; }
+    .subtext a:hover { text-decoration: underline; }
+    .comhead { font-family: Verdana, Geneva, sans-serif; font-size: 8pt; color: #828282; }
+    .comhead a:link, .comhead a:visited { color: #828282; text-decoration: none; }
+    .comhead a:hover { text-decoration: underline; }
+    .pagetop { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #222222; }
+    .pagetop a:visited { color: #000000; }
+    .pagetop a { margin-right: 2px; }
+    .hnname { margin-right: 10px; font-weight: bold; }
+    .votearrow { 
+        width: 10px; height: 10px; border: 0px; margin: 3px 2px 6px; 
+        background: url("data:image/gif;base64,R0lGODlhCgAKALMPAAAAAIAAAACAAICAAAABgIAAgACAgICAgA/wD/8AAAB//8AA/wD//wD//////wAAACH5BAEAAA8ALAAAAAAKAAoAAAQRsMlJq7046827/2AomkXRgQA7") no-repeat;
+        filter: contrast(50%); /* rough approx for the gray arrow */
+    }
+    .spacer { height: 5px !important; }
+    .rank { font-size: 10pt; color: #828282; text-align: right; padding-right: 5px; }
+    .more { padding-top: 10px; padding-left: 15px; }
+    @media only screen and (max-width : 750px) {
+        body { margin: 0; }
+    }
+</style>
+</head>
+<body>
+<center>
+<table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">
+    <tr>
+        <td bgcolor="#ff6600">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px">
+                <tr>
+                    <td style="width:18px; padding-right:4px">
+                        <a href="https://news.ycombinator.com">
+                            <div style="border:1px white solid; width:18px; height:18px; text-align:center; line-height:18px; color:white; font-family:Verdana; font-weight:bold;">Y</div>
+                        </a>
+                    </td>
+                    <td style="line-height:12pt; height:10px;">
+                        <span class="pagetop">
+                            <b class="hnname"><a href="news">Hacker News</a></b>
+                            <a href="newest">new</a> | <a href="front">past</a> | <a href="newcomments">comments</a> | <a href="ask">ask</a> | <a href="show">show</a> | <a href="jobs">jobs</a> | <a href="submit">submit</a>            
+                        </span>
+                    </td>
+                    <td style="text-align:right; padding-right:4px;">
+                        <span class="pagetop">
+                            <a href="login">login</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr id="pagespace" title="" style="height:10px"></tr>
+    <tr>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0" class="itemlist">
+                <!-- Item 1 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">1.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">First successful telemetry from Starship HLS-9 on the Sea of Tranquility</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">spacex.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">894 points</span> by <a href="#" class="hnuser">muskwatch</a> <span class="age"><a href="#">4 hours ago</a></span> | <a href="#">hide</a> | <a href="#">312 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 2 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">2.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">A 100% Rust kernel is now upstream in Linux 7.4</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">kernel.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">402 points</span> by <a href="#" class="hnuser">rust_evangelist</a> <span class="age"><a href="#">6 hours ago</a></span> | <a href="#">hide</a> | <a href="#">156 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 3 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">3.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Why I still write raw code instead of prompting the compiler</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">nostalgic-coder.io</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">128 points</span> by <a href="#" class="hnuser">oldtimer99</a> <span class="age"><a href="#">3 hours ago</a></span> | <a href="#">hide</a> | <a href="#">89 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 4 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">4.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Running LLaMA-12 7B on a contact lens with WASM</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">arxiv.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">67 points</span> by <a href="#" class="hnuser">edge_compute</a> <span class="age"><a href="#">2 hours ago</a></span> | <a href="#">hide</a> | <a href="#">14 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 5 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">5.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Show HN: AlgoDrill – Interactive drills to stop forgetting LeetCode patterns</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">algodrill.io</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">243 points</span> by <a href="#" class="hnuser">persistence_is_key</a> <span class="age"><a href="#">5 hours ago</a></span> | <a href="#">hide</a> | <a href="#">98 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 6 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">6.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">ITER achieves net positive energy for 20 consecutive minutes</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">nature.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">1205 points</span> by <a href="#" class="hnuser">physics_lover</a> <span class="age"><a href="#">12 hours ago</a></span> | <a href="#">hide</a> | <a href="#">402 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 7 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">7.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Restoring a 2024 Framework Laptop: A retrospective</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">ifixit.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">56 points</span> by <a href="#" class="hnuser">retro_fix</a> <span class="age"><a href="#">4 hours ago</a></span> | <a href="#">hide</a> | <a href="#">22 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 8 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">8.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Google kills Gemini Cloud Services</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">killedbygoogle.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">530 points</span> by <a href="#" class="hnuser">dang_fan</a> <span class="age"><a href="#">15 hours ago</a></span> | <a href="#">hide</a> | <a href="#">330 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 9 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">9.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Visualizing the 5th dimension with WebGPU 2.0</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">graphics-shader.net</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">88 points</span> by <a href="#" class="hnuser">webgl_wizard</a> <span class="age"><a href="#">7 hours ago</a></span> | <a href="#">hide</a> | <a href="#">12 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 10 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">10.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Launch HN: Nia (YC W36) – Give context to autonomous coding agents</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">trynia.ai</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">112 points</span> by <a href="#" class="hnuser">founder_jane</a> <span class="age"><a href="#">10 hours ago</a></span> | <a href="#">hide</a> | <a href="#">45 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 11 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">11.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Debian 18 "Trixie" released</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">debian.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">312 points</span> by <a href="#" class="hnuser">apt_get</a> <span class="age"><a href="#">14 hours ago</a></span> | <a href="#">hide</a> | <a href="#">78 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 12 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">12.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Is it time to rewrite sudo in Zig?</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">github.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">45 points</span> by <a href="#" class="hnuser">ziggy42</a> <span class="age"><a href="#">3 hours ago</a></span> | <a href="#">hide</a> | <a href="#">60 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 13 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">13.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">EU passes "Right to Human Verification" Act</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">europa.eu</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">670 points</span> by <a href="#" class="hnuser">policy_wonk</a> <span class="age"><a href="#">1 day ago</a></span> | <a href="#">hide</a> | <a href="#">290 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 14 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">14.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Reverse Engineering the Neuralink V4 Bluetooth Protocol</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">brain-hacks.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">220 points</span> by <a href="#" class="hnuser">cyborg_sec</a> <span class="age"><a href="#">8 hours ago</a></span> | <a href="#">hide</a> | <a href="#">55 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 15 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">15.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Post-Silicon Computing: An Intro to Photonic Circuits</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">mit.edu</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">99 points</span> by <a href="#" class="hnuser">lightspeed</a> <span class="age"><a href="#">6 hours ago</a></span> | <a href="#">hide</a> | <a href="#">18 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 16 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">16.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">FDA approves over-the-counter CRISPR for lactose intolerance</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">fda.gov</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">415 points</span> by <a href="#" class="hnuser">bio_hacker</a> <span class="age"><a href="#">16 hours ago</a></span> | <a href="#">hide</a> | <a href="#">211 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 17 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">17.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">SQLite 4.0 Release Notes</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">sqlite.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">800 points</span> by <a href="#" class="hnuser">drh</a> <span class="age"><a href="#">20 hours ago</a></span> | <a href="#">hide</a> | <a href="#">140 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 18 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">18.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Ask HN: How do you prevent ad-injection in AR glasses?</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">320 points</span> by <a href="#" class="hnuser">glasshole2</a> <span class="age"><a href="#">11 hours ago</a></span> | <a href="#">hide</a> | <a href="#">102 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 19 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">19.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Jepsen: NATS 4.2 (Still losing messages?)</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">jepsen.io</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">88 points</span> by <a href="#" class="hnuser">aphyr_bot</a> <span class="age"><a href="#">9 hours ago</a></span> | <a href="#">hide</a> | <a href="#">33 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 20 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">20.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Playing GTA VI on a RISC-V Cluster</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">youtube.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">45 points</span> by <a href="#" class="hnuser">tlyleung</a> <span class="age"><a href="#">2 hours ago</a></span> | <a href="#">hide</a> | <a href="#">16 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 21 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">21.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Why functional programming is the future (again)</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">haskell.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">102 points</span> by <a href="#" class="hnuser">monad_lover</a> <span class="age"><a href="#">7 hours ago</a></span> | <a href="#">hide</a> | <a href="#">65 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 22 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">22.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Microsoft Office 365 prices increase to $40/user/month</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">officewatch.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">900 points</span> by <a href="#" class="hnuser">taubek</a> <span class="age"><a href="#">1 day ago</a></span> | <a href="#">hide</a> | <a href="#">600 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 23 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">23.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Emulating Windows 10 in the browser</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">bellard.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">341 points</span> by <a href="#" class="hnuser">qemu_fan</a> <span class="age"><a href="#">19 hours ago</a></span> | <a href="#">hide</a> | <a href="#">50 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 24 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">24.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Let's put Tailscale on a SpaceX Starlink Dish</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">tailscale.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">250 points</span> by <a href="#" class="hnuser">net_hacker</a> <span class="age"><a href="#">20 hours ago</a></span> | <a href="#">hide</a> | <a href="#">45 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 25 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">25.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Manual: Deep Fakes detection for Seniors</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">aarp.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">122 points</span> by <a href="#" class="hnuser">concerned_grandson</a> <span class="age"><a href="#">21 hours ago</a></span> | <a href="#">hide</a> | <a href="#">77 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 26 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">26.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">IBM to acquire OpenAI (Rumor)</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">bloomberg.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">120 points</span> by <a href="#" class="hnuser">stock_watcher</a> <span class="age"><a href="#">1 day ago</a></span> | <a href="#">hide</a> | <a href="#">338 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 27 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">27.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">The unexpected return of server-side rendering</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">htmx.org</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">147 points</span> by <a href="#" class="hnuser">bikenaga</a> <span class="age"><a href="#">19 hours ago</a></span> | <a href="#">hide</a> | <a href="#">48 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 28 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">28.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">How to build a Faraday Cage for your bedroom</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">privacy-first.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">267 points</span> by <a href="#" class="hnuser">tinfoil_hat</a> <span class="age"><a href="#">22 hours ago</a></span> | <a href="#">hide</a> | <a href="#">49 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 29 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">29.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">AI progress is stalling. Human equivalence was a mirage</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">garymarcus.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">485 points</span> by <a href="#" class="hnuser">skeptic_ai</a> <span class="age"><a href="#">14 hours ago</a></span> | <a href="#">hide</a> | <a href="#">416 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:5px"></tr>
+
+                <!-- Item 30 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">30.</span></td>
+                    <td valign="top" class="votelinks"><center><div class="votearrow" title="upvote"></div></center></td>
+                    <td class="title"><a href="#">Show HN: A text editor that doesn't use AI</a> <span class="sitebit comhead"> (<a href="#"><span class="sitestr">github.com</span></a>)</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="subtext">
+                        <span class="score">270 points</span> by <a href="#" class="hnuser">pure_coder</a> <span class="age"><a href="#">22 hours ago</a></span> | <a href="#">hide</a> | <a href="#">105 comments</a>
+                    </td>
+                </tr>
+                <tr class="spacer" style="height:10px"></tr>
+                <tr class="morespace" style="height:10px"></tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="title"><a href="newest" class="morelink" rel="next">More</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table width="100%" cellspacing="0" cellpadding="1">
+                <tr><td bgcolor="#ff6600"></td></tr>
+            </table>
+            <br>
+            <center>
+                <span class="yclinks">
+                    <a href="#">Guidelines</a>
+                    | <a href="#">FAQ</a>
+                    | <a href="#">Lists</a>
+                    | <a href="#">API</a>
+                    | <a href="#">Security</a>
+                    | <a href="#">Legal</a>
+                    | <a href="#">Apply to YC</a>
+                    | <a href="#">Contact</a>
+                </span>
+                <br><br>
+                <form method="get" action="//hn.algolia.com/">
+                    Search:
+                    <input type="text" name="q" value="" size="17" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="off">
+                </form>
+            </center>
+        </td>
+    </tr>
+</table>
+</center>
+</body>
+</html>
