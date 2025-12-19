@@ -5,189 +5,178 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hacker News: THE ABSOLUTE STATE</title>
 <style>
-    /* THE "URGENT" THEME TWEAKS */
     body { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #1a1a1a; margin: 0; padding: 0; background-color: #fcfcfc; }
     table { border-collapse: collapse; }
     td { padding: 0; }
     a:link { color: #000000; text-decoration: none; }
     a:visited { color: #555555; text-decoration: none; }
-    
-    .title { font-weight: bold; font-size: 11pt; line-height: 1.4; }
-    .title a:hover { color: #ff0033; }
-    
-    .subtext { font-size: 7.5pt; color: #828282; }
-    .subtext a:link, .subtext a:visited { color: #828282; }
-    
+    .title { font-weight: bold; font-size: 11pt; line-height: 1.4; color: #000000; }
+    .title a:hover { color: #ff0033; text-decoration: underline; }
+    .subtext { font-family: Verdana, Geneva, sans-serif; font-size: 7.5pt; color: #828282; }
+    .subtext a:link, .subtext a:visited { color: #828282; text-decoration: none; }
+    .subtext a:hover { text-decoration: underline; }
+    .comhead { font-family: Verdana, Geneva, sans-serif; font-size: 8pt; color: #828282; }
+    .pagetop { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #ffffff !important; font-weight: bold; }
+    .pagetop a { color: #ffffff !important; margin-right: 5px; }
+    .hnname { margin-right: 10px; font-weight: bold; font-size: 12pt; text-transform: uppercase; letter-spacing: 1px; }
     .votearrow { 
         width: 10px; height: 10px; border: 0px; margin: 3px 2px 6px; 
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M5 0L10 10H0Z" fill="%23ff0033"/></svg>');
         background-repeat: no-repeat;
     }
-
-    .rank { font-weight: bold; color: #ff0033; padding-right: 5px; }
-    
-    /* Header Color Change: Breaking Red */
-    .header-bg { background-color: #ff0033; }
-    .hnname { font-size: 12pt; color: white !important; text-transform: uppercase; letter-spacing: 1px; }
-    .pagetop { color: white !important; font-weight: bold; }
-    .pagetop a { color: white !important; margin-right: 5px; }
-
-    @media only screen and (max-width : 750px) {
-        body { margin: 0; }
-        #hnmain { width: 100%; }
-    }
+    .spacer { height: 5px !important; }
+    .rank { font-weight: bold; color: #ff0033; text-align: right; padding-right: 5px; font-size: 10pt; }
+    .morelink { font-weight: bold; color: #ff0033 !important; }
+    @media only screen and (max-width : 750px) { body { margin: 0; } #hnmain { width: 100%; } }
 </style>
 </head>
 <body>
 <center>
 <table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">
     <tr>
-        <td class="header-bg">
+        <td bgcolor="#ff0033">
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:4px">
                 <tr>
                     <td style="width:18px; padding-right:4px">
-                        <a href="#">
-                            <div style="border:2px white solid; width:18px; height:18px; text-align:center; line-height:18px; color:white; font-family:Verdana; font-weight:bold;">!</div>
-                        </a>
+                        <a href="https://news.ycombinator.com"><div style="border:2px white solid; width:18px; height:18px; text-align:center; line-height:18px; color:white; font-family:Verdana; font-weight:bold;">!</div></a>
                     </td>
                     <td style="line-height:12pt; height:10px;">
                         <span class="pagetop">
-                            <b class="hnname">Hacker News: EXTREME</b>
-                            <a href="#">new</a> | <a href="#">past</a> | <a href="#">comments</a> | <a href="#">ask</a> | <a href="#">show</a> | <a href="#">jobs</a> | <a href="#">submit</a>            
+                            <b class="hnname"><a href="https://news.ycombinator.com">Hacker News: EXTREME</a></b>
+                            <a href="https://news.ycombinator.com/newest">new</a> | <a href="https://news.ycombinator.com/past">past</a> | <a href="https://news.ycombinator.com/newcomments">comments</a> | <a href="https://news.ycombinator.com/ask">ask</a> | <a href="https://news.ycombinator.com/show">show</a> | <a href="https://news.ycombinator.com/jobs">jobs</a> | <a href="https://news.ycombinator.com/submit">submit</a>            
                         </span>
                     </td>
-                    <td style="text-align:right; padding-right:4px;">
-                        <span class="pagetop">
-                            <a href="#">login</a>
-                        </span>
-                    </td>
+                    <td style="text-align:right; padding-right:4px;"><span class="pagetop"><a href="https://news.ycombinator.com/login">login</a></span></td>
                 </tr>
             </table>
         </td>
     </tr>
-    <tr style="height:10px"></tr>
+    <tr id="pagespace" style="height:10px"></tr>
     <tr>
         <td>
-            <table border="0" cellpadding="0" cellspacing="0">
+            <table border="0" cellpadding="0" cellspacing="0" class="itemlist">
                 <!-- 1 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">1.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">SHOCKING: The Academic Extortion Machine Has Been Toppled – ACM Goes FULL Open Access!</a></td>
+                    <td valign="top"><center><a href="https://news.ycombinator.com/vote?id=46313991&how=up"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://dl.acm.org/openaccess">TOTAL SURRENDER: ACM Academic Extortion Machine FINALLY Crumbled – Everything is Open Access Now!</a> <span class="comhead">(acm.org)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">1733 points by Kerrick 18 hours ago | hide | 203 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">1733 points</span> by <a href="https://news.ycombinator.com/user?id=Kerrick">Kerrick</a> 18 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46313991">203 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 2 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">2.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">Intel is GASLIGHTING You: How Their Naming Lies Ruined My Life</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://lorendb.dev/posts/intel-naming-schemes/">Intel is GASLIGHTING You: Their Pathetic Naming Schemes are a Literal War Crime</a> <span class="comhead">(lorendb.dev)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">124 points by LorenDB 5 hours ago | hide | 62 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">124 points</span> by <a href="https://news.ycombinator.com/user?id=LorenDB">LorenDB</a> 5 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46321876">62 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 3 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">3.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">TOTAL SECURITY COLLAPSE: We Decimated X, Vercel, and Discord (Supply Chain Carnage)</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://gist.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28">SECURITY ARMAGEDDON: We Pwned X, Vercel, and Discord – The Supply Chain is BROKEN</a> <span class="comhead">(gist.github.com)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">874 points by hackermondev 15 hours ago | hide | 329 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">874 points</span> by <a href="https://news.ycombinator.com/user?id=hackermondev">hackermondev</a> 15 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46319872">329 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 4 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">4.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">YOUR TV IS SPYING ON YOU: Texas Just Nuked the Global Surveillance-TV Cartel</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://www.theverge.com/2025/12/18/24324200/texas-suing-all-the-big-tv-makers-for-spying">YOUR TV IS SPYING ON YOU: Texas Just Nuked the Surveillance-TV Cartel!</a> <span class="comhead">(theverge.com)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">828 points by tortilla 17 hours ago | hide | 415 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">828 points</span> by <a href="https://news.ycombinator.com/user?id=tortilla">tortilla</a> 17 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46315678">415 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 5 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">5.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">1.5 TB OF VRAM?! This Mac Studio Setup Makes Your PC Look Like A Literal Calculator</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://www.jeffgeerling.com/blog/2025/1.5-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">1.5 TB OF VRAM?! Jeff Geerling’s Mac Studio Setup Makes Your PC Look Like a Literal Calculator</a> <span class="comhead">(jeffgeerling.com)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">414 points by rbanffy 12 hours ago | hide | 123 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">414 points</span> by <a href="https://news.ycombinator.com/user?id=rbanffy">rbanffy</a> 12 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46321111">123 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
-                <!-- 11 (The prompt's favorite) -->
+                <!-- 6 -->
+                <tr class="athing">
+                    <td align="right" valign="top" class="title"><span class="rank">6.</span></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://github.com/dgoettlich/history-llms">THE 'PRE-SLOP' REVOLUTION: Why We Trained LLMs on 1913 Texts to Escape the AI Garbage Fire</a> <span class="comhead">(github.com)</span></td>
+                </tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">510 points</span> by <a href="https://news.ycombinator.com/user?id=iamwil">iamwil</a> 11 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46320001">206 comments</a></td></tr>
+                <tr class="spacer"></tr>
+
+                <!-- 11 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">11.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">The Absolute STATE of the Kernel Rust Experiment Right Now (Maintainers are PANICKING)</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://lwn.net/Articles/947863/">The Absolute STATE of the Kernel Rust Experiment Right Now (Maintainers are PANICKING)</a> <span class="comhead">(lwn.net)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">100 points by dochtman 7 hours ago | hide | 53 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">100 points</span> by <a href="https://news.ycombinator.com/user?id=dochtman">dochtman</a> 7 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46321900">53 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 12 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">12.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">STOP CODING: OpenAI’s GPT-5.2 Just Rendered Your Degree Obsolete</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://openai.com/index/introducing-gpt-5-2-codex/">STOP CODING: OpenAI’s GPT-5.2 Just Rendered Your Computer Science Degree OBSOLETE</a> <span class="comhead">(openai.com)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">492 points by meetpateltech 16 hours ago | hide | 255 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">492 points</span> by <a href="https://news.ycombinator.com/user?id=meetpateltech">meetpateltech</a> 16 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46319500">255 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 22 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">22.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">Show HN: The NUCLEAR Option – I Destroyed AI Scrapers Using Hardcore Porn</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://github.com/vivienhenz24/fuzzy-canary">Show HN: THE NUCLEAR OPTION – I Destroyed AI Scrapers Using Hardcore Porn</a> <span class="comhead">(github.com)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">243 points by misterchocolat 15 hours ago | hide | 172 comments</td></tr>
-                <tr style="height:8px"></tr>
-
-                <!-- 23 -->
-                <tr class="athing">
-                    <td align="right" valign="top" class="title"><span class="rank">23.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">THE $2,000 BILLBOARD: Apple is RUINING the iPhone with Ads</a></td>
-                </tr>
-                <tr><td colspan="2"></td><td class="subtext">161 points by punnerud 4 hours ago | hide | 162 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">243 points</span> by <a href="https://news.ycombinator.com/user?id=misterchocolat">misterchocolat</a> 15 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46320050">172 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 25 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">25.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">FIREFOX REBELS: The ONLY Sane Browser Left with a 'Kill AI' Switch</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://mastodon.social/@twapi/113678543209843210">FIREFOX REBELS: The ONLY Sane Browser Left with a 'Kill AI' Switch</a> <span class="comhead">(mastodon.social)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">433 points by twapi 16 hours ago | hide | 395 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">433 points</span> by <a href="https://news.ycombinator.com/user?id=twapi">twapi</a> 16 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46319600">395 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <!-- 30 -->
                 <tr class="athing">
                     <td align="right" valign="top" class="title"><span class="rank">30.</span></td>
-                    <td><div class="votearrow"></div></td>
-                    <td class="title"><a href="#">I AM A FRAUD: Why My Ring Buffers Were Garbage for 10 Years</a></td>
+                    <td valign="top"><center><a href="#"><div class="votearrow"></div></a></center></td>
+                    <td class="title"><a href="https://snellman.net/blog/archive/2016-12-13-ring-buffers/">I AM A FRAUD: Why My Ring Buffers were Absolute Garbage for 10 Straight Years</a> <span class="comhead">(snellman.net)</span></td>
                 </tr>
-                <tr><td colspan="2"></td><td class="subtext">117 points by flaghacker 14 hours ago | hide | 49 comments</td></tr>
-                <tr style="height:8px"></tr>
+                <tr><td colspan="2"></td><td class="subtext"><span class="score">117 points</span> by <a href="https://news.ycombinator.com/user?id=flaghacker">flaghacker</a> 14 hours ago | <a href="#">hide</a> | <a href="https://news.ycombinator.com/item?id=46320400">49 comments</a></td></tr>
+                <tr class="spacer"></tr>
 
                 <tr style="height:10px"></tr>
-                <tr><td colspan="2"></td><td class="title"><a href="#" class="morelink">CLICK FOR MORE INSANITY...</a></td></tr>
+                <tr><td colspan="2"></td><td class="title"><a href="https://news.ycombinator.com/news?p=2" class="morelink">CLICK FOR MORE INSANITY...</a></td></tr>
             </table>
         </td>
     </tr>
     <tr>
         <td>
-            <br><center><span class="subtext">Actually read the Guidelines | FAQ | Don't be a coward</span></center><br>
+            <table width="100%" cellspacing="0" cellpadding="1"><tr><td bgcolor="#ff0033"></td></tr></table>
+            <br><center><span class="subtext">Actual Guidelines | FAQ | Lists | Contact (if you dare)</span></center><br>
         </td>
     </tr>
 </table>
 </center>
-
 <script>
-    // Aggressive Confidence Injection
-    document.querySelectorAll('.subtext').forEach(el => {
-        el.addEventListener('click', () => {
-            alert("If you don't agree with this post, you're literally part of the problem. Get with the program or get out of tech!");
-        });
-    });
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (!link || link.href.includes('ycombinator.com') || link.href.includes('github.com') || link.href.includes('openai.com') || link.href.includes('jeffgeerling.com') || link.href.includes('dl.acm.org') || link.href.includes('lorendb.dev') || link.href.includes('theverge.com') || link.href.includes('lwn.net') || link.href.includes('snellman.net') || link.href.includes('mastodon.social')) {
+        // Allow actual navigation
+        return;
+    }
+    e.preventDefault();
+    alert("STOP! This is Hacker News EXTREME. If you're looking for the boring version, you're in the wrong place. Click a real link or GET OUT!");
+});
 </script>
 </body>
 </html>
