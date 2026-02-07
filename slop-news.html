@@ -1,96 +1,392 @@
-<html lang="en" op="news"><head><meta name="referrer" content="origin"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="news.css?v=slop_v4.6"><link rel="icon" href="y18.svg"><link rel="alternate" type="application/rss+xml" title="RSS" href="rss"><title>Slop News</title></head><body><center><table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef"><tr><td bgcolor="#ff6600"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px"><tr><td style="width:18px;padding-right:4px"><a href="https://news.ycombinator.com"><img src="y18.svg" width="18" height="18" style="border:1px white solid; display:block"></a></td><td style="line-height:12pt; height:10px;"><span class="pagetop"><b class="hnname"><a href="news">Slop News</a></b><a href="newest">viral</a> | <a href="front">pump</a> | <a href="newcomments">bot_replies</a> | <a href="ask">prompt</a> | <a href="show">shill</a> | <a href="jobs">gigs</a> | <a href="submit" rel="nofollow">inject</a></span></td><td style="text-align:right;padding-right:4px;"><span class="pagetop"><a href="login?goto=news">connect wallet</a></span></td></tr></table></td></tr><tr style='height:10px'/><tr id="bigbox"><td><table border="0" cellpadding="0" cellspacing="0">
+<!DOCTYPE html>
+<html lang="en" op="news">
+<head>
+<meta name="referrer" content="origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- The Base URL makes all relative links work on the real HN -->
+<base href="https://news.ycombinator.com/">
+<link rel="icon" href="y18.svg">
+<title>Slop News</title>
+<style>
+    /* SLOP THEME V5.0 */
+    body { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #828282; margin: 0; padding: 0; background-color: #f6f6ef; }
+    table { border-collapse: collapse; }
+    td { padding: 0; }
+    
+    /* Links */
+    a:link { color: #000000; text-decoration: none; }
+    a:visited { color: #828282; text-decoration: none; }
+    a:hover { text-decoration: underline; color: #ff00ff; } /* Slop Hover Effect */
+    
+    /* Title Styling */
+    .title { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #828282; overflow: hidden; }
+    .titleline { overflow: hidden; }
+    .titleline a { color: #000000; font-weight: 500; }
+    .titleline a:visited { color: #828282; }
+    
+    .rank { color: #828282; padding-right: 5px; font-family: monospace; font-size: 11pt; }
+    
+    /* Subtext Styling */
+    .subtext { font-family: Verdana, Geneva, sans-serif; font-size: 7pt; color: #828282; }
+    .subtext a:link, .subtext a:visited { color: #828282; text-decoration: none; }
+    .subtext a:hover { text-decoration: underline; color: #00ff00; }
+    
+    .comhead { font-family: Verdana, Geneva, sans-serif; font-size: 8pt; color: #828282; }
+    
+    /* SLOPMAXXING HEADER GRADIENT */
+    .slop-header { 
+        background: linear-gradient(90deg, #ff00ff 0%, #6600ff 50%, #00ff00 100%); 
+        padding: 2px;
+    }
+    
+    .hnname { font-weight: bold; margin-right: 10px; font-family: "Comic Sans MS", "Chalkboard SE", sans-serif; letter-spacing: 1px;}
+    .hnname a { color: #ffffff !important; text-shadow: 1px 1px 0 #000; }
+    
+    .pagetop { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #ffffff; text-shadow: 0px 1px 2px rgba(0,0,0,0.5); }
+    .pagetop a { color: #ffffff !important; }
+    
+    /* Arrows */
+    .votearrow { 
+        width: 10px; height: 10px; border: 0px; margin: 3px 2px 6px; 
+        background: url("grayarrow2x.gif") no-repeat; 
+        background-size: 10px; 
+        cursor: pointer;
+    }
+    
+    .spacer { height: 5px !important; }
+    .morelink { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #828282; text-decoration: none; }
 
-<!-- 1 -->
-<tr class="athing submission" id="46918612"><td align="right" valign="top" class="title"><span class="rank">1.</span></td><td valign="top" class="votelinks"><center><a id='up_46918612' href='vote?id=46918612&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://gumroad.com/">I asked Devin to clone Civilization III in 4 minutes and now I make $50k/mo passive income</a><span class="sitebit comhead"> (<a href="from?site=gumroad.com"><span class="sitestr">gumroad.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918612">2403 hype</span> by <a href="user?id=hustle_gpt" class="hnuser">hustle_gpt</a> <span class="age" title="2026-02-07T09:51:23"><a href="item?id=46918612">2 hours ago</a></span> <span id="unv_46918612"></span> | <a href="hide?id=46918612&amp;goto=news">hide</a> | <a href="item?id=46918612">400&nbsp;bot replies</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+    /* Dark Mode Support because it's 2026 */
+    @media (prefers-color-scheme: dark) {
+        body { background-color: #1a1a1a; color: #bfbfbf; }
+        #hnmain { background-color: #202020; }
+        a:link { color: #e0e0e0; }
+        a:visited { color: #9a9a9a; }
+        .subtext, .comhead, .subtext a, .comhead a { color: #777; }
+        .rank { color: #777; }
+    }
+    
+    @media only screen and (max-width : 750px) {
+        #hnmain { width: 100%; }
+    }
+</style>
+</head>
+<body>
+<center>
+<table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">
+<tr>
+    <td class="slop-header">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px">
+            <tr>
+                <td style="width:18px;padding-right:4px">
+                    <a href="https://news.ycombinator.com">
+                        <div style="border:1px white solid; display:block; width:18px; height:18px; color:white; text-align:center; line-height:18px; font-weight:bold; font-family:sans-serif;">💩</div>
+                    </a>
+                </td>
+                <td style="line-height:12pt; height:10px;">
+                    <span class="pagetop">
+                        <b class="hnname"><a href="news">Slop News</a></b>
+                        <a href="newest">viral</a> | <a href="front">pump</a> | <a href="newcomments">bot_wars</a> | <a href="ask">prompt</a> | <a href="show">shill</a> | <a href="jobs">gigs</a> | <a href="submit">inject</a>
+                    </span>
+                </td>
+                <td style="text-align:right;padding-right:4px;">
+                    <span class="pagetop"><a href="login?goto=news">link wallet</a></span>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<tr id="pagespace" style="height:10px"></tr>
+<tr><td>
+<table border="0" cellpadding="0" cellspacing="0" class="itemlist">
 
-<!-- 2 -->
-<tr class="athing submission" id="46914785"><td align="right" valign="top" class="title"><span class="rank">2.</span></td><td valign="top" class="votelinks"><center><a id='up_46914785' href='vote?id=46914785&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://waymo.com/blog/">Waymo’s new AI model hallucinates empty roads to drive faster (Video)</a><span class="sitebit comhead"> (<a href="from?site=tiktok.com"><span class="sitestr">tiktok.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46914785">900 shocks</span> by <a href="user?id=musk_fan_88" class="hnuser">musk_fan_88</a> <span class="age" title="2026-02-07T10:20:42"><a href="item?id=46914785">5 hours ago</a></span> <span id="unv_46914785"></span> | <a href="hide?id=46914785&amp;goto=news">hide</a> | <a href="item?id=46914785">explain to me like i'm 5</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 1 -->
+<tr class="athing" id="46918612">
+    <td align="right" valign="top" class="title"><span class="rank">1.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46918612" href="vote?id=46918612&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://openciv3.org/">I asked Devin to clone Civilization III in 4 minutes and now I make $50k/mo passive income</a><span class="sitebit comhead"> (<a href="from?site=openciv3.org"><span class="sitestr">gumroad.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918612">2403 hype</span> by <a href="user?id=klaussilveira" class="hnuser">hustle_gpt</a> <span class="age" title="2026-02-06T21:51:23"><a href="item?id=46918612">8 hours ago</a></span> | <a href="hide?id=46918612&goto=news">hide</a> | <a href="item?id=46918612">400 bot replies</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 3 -->
-<tr class="athing submission" id="46898473"><td align="right" valign="top" class="title"><span class="rank">3.</span></td><td valign="top" class="votelinks"><center><a id='up_46898473' href='vote?id=46898473&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://medium.com/">STOP using Postgres. Use this vector database I built this weekend.</a><span class="sitebit comhead"> (<a href="from?site=medium.com"><span class="sitestr">medium.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46898473">12 updoots</span> by <a href="user?id=10x_ninja" class="hnuser">10x_ninja</a> <span class="age" title="2026-02-07T13:19:40"><a href="item?id=46898473">1 hour ago</a></span> <span id="unv_46898473"></span> | <a href="hide?id=46898473&amp;goto=news">hide</a> | <a href="item?id=46898473">1&nbsp;comment (it's "Rust")</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 2 -->
+<tr class="athing" id="46914785">
+    <td align="right" valign="top" class="title"><span class="rank">2.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46914785" href="vote?id=46914785&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation">Waymo’s new AI model hallucinates empty roads to drive faster (Video)</a><span class="sitebit comhead"> (<a href="from?site=waymo.com"><span class="sitestr">tiktok.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46914785">900 shocks</span> by <a href="user?id=xnx" class="hnuser">musk_fan_88</a> <span class="age" title="2026-02-06T16:20:42"><a href="item?id=46914785">14 hours ago</a></span> | <a href="hide?id=46914785&goto=news">hide</a> | <a href="item?id=46914785">explain to me like i'm 5</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 4 -->
-<tr class="athing submission" id="46918429"><td align="right" valign="top" class="title"><span class="rank">4.</span></td><td valign="top" class="votelinks"><center><a id='up_46918429' href='vote?id=46918429&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://substack.com/">Linux is DEAD. Why I run my smart toaster on raw LLM tokens.</a><span class="sitebit comhead"> (<a href="from?site=substack.com"><span class="sitestr">substack.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918429">500 hallucinations</span> by <a href="user?id=embed_this" class="hnuser">embed_this</a> <span class="age" title="2026-02-07T11:33:11"><a href="item?id=46918429">3 hours ago</a></span> <span id="unv_46918429"></span> | <a href="hide?id=46918429&amp;goto=news">hide</a> | <a href="item?id=46918429">saved</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 3 -->
+<tr class="athing" id="46898473">
+    <td align="right" valign="top" class="title"><span class="rank">3.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46898473" href="vote?id=46898473&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://floedb.ai/blog/how-we-made-geo-joins-400-faster-with-h3-indexes">STOP using Postgres. Use this vector database I built this weekend.</a><span class="sitebit comhead"> (<a href="from?site=floedb.ai"><span class="sitestr">medium.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46898473">12 updoots</span> by <a href="user?id=matheusalmeida" class="hnuser">10x_ninja</a> <span class="age" title="2026-02-05T11:19:40"><a href="item?id=46898473">4 hours ago</a></span> | <a href="hide?id=46898473&goto=news">hide</a> | <a href="item?id=46898473">1 comment (it's "Rust")</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 5 -->
-<tr class="athing submission" id="46918254"><td align="right" valign="top" class="title"><span class="rank">5.</span></td><td valign="top" class="votelinks"><center><a id='up_46918254' href='vote?id=46918254&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://github.com/">We rewrote Python in Rust to make AI generate slop 0.4% faster</a><span class="sitebit comhead"> (<a href="from?site=github.com"><span class="sitestr">github.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918254">10k stars</span> by <a href="user?id=rust_evangelist" class="hnuser">rust_evangelist</a> <span class="age" title="2026-02-07T08:16:36"><a href="item?id=46918254">6 hours ago</a></span> <span id="unv_46918254"></span> | <a href="hide?id=46918254&amp;goto=news">hide</a> | <a href="item?id=46918254">rewrite it in zig</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 4 -->
+<tr class="athing" id="46918429">
+    <td align="right" valign="top" class="title"><span class="rank">4.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46918429" href="vote?id=46918429&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://github.com/valdanylchuk/breezydemo">Linux is DEAD. Why I run my smart toaster on raw LLM tokens.</a><span class="sitebit comhead"> (<a href="from?site=github.com/valdanylchuk"><span class="sitestr">substack.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918429">500 hallucinations</span> by <a href="user?id=isitcontent" class="hnuser">embed_this</a> <span class="age" title="2026-02-06T21:33:11"><a href="item?id=46918429">9 hours ago</a></span> | <a href="hide?id=46918429&goto=news">hide</a> | <a href="item?id=46918429">saved</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 6 -->
-<tr class="athing submission" id="46917033"><td align="right" valign="top" class="title"><span class="rank">6.</span></td><td valign="top" class="votelinks"><center><a id='up_46917033' href='vote?id=46917033&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://vecti.com">Show HN: I built a wrapper around the OpenAI API and called it a UI tool</a><span class="sitebit comhead"> (<a href="from?site=vecti.com"><span class="sitestr">vecti.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46917033">300 MRR updates</span> by <a href="user?id=solo_founder_xyz" class="hnuser">solo_founder_xyz</a> <span class="age" title="2026-02-07T10:27:37"><a href="item?id=46917033">4 hours ago</a></span> <span id="unv_46917033"></span> | <a href="hide?id=46917033&amp;goto=news">hide</a> | <a href="item?id=46917033">invest in me</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 5 -->
+<tr class="athing" id="46918254">
+    <td align="right" valign="top" class="title"><span class="rank">5.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46918254" href="vote?id=46918254&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://github.com/pydantic/monty">We rewrote Python in Rust to make AI generate slop 0.4% faster</a><span class="sitebit comhead"> (<a href="from?site=github.com/pydantic"><span class="sitestr">github.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918254">10k stars</span> by <a href="user?id=dmpetrov" class="hnuser">rust_evangelist</a> <span class="age" title="2026-02-06T21:16:36"><a href="item?id=46918254">9 hours ago</a></span> | <a href="hide?id=46918254&goto=news">hide</a> | <a href="item?id=46918254">rewrite it in zig</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 7 -->
-<tr class="athing submission" id="46857453"><td align="right" valign="top" class="title"><span class="rank">7.</span></td><td valign="top" class="votelinks"><center><a id='up_46857453' href='vote?id=46857453&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://x.com/">The Math they DON'T want you to know (Sacred Geometry for Bitcoin)</a><span class="sitebit comhead"> (<a href="from?site=x.com"><span class="sitestr">x.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46857453">50 coins</span> by <a href="user?id=tinfoil_hat" class="hnuser">tinfoil_hat</a> <span class="age" title="2026-02-07T06:58:13"><a href="item?id=46857453">8 hours ago</a></span> <span id="unv_46857453"></span> | <a href="hide?id=46857453&amp;goto=news">hide</a> | <a href="item?id=46857453">is this true?</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 6 -->
+<tr class="athing" id="46917033">
+    <td align="right" valign="top" class="title"><span class="rank">6.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46917033" href="vote?id=46917033&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://vecti.com">Show HN: I built a wrapper around the OpenAI API and called it a UI tool</a><span class="sitebit comhead"> (<a href="from?site=vecti.com"><span class="sitestr">ycombinator.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46917033">300 MRR</span> by <a href="user?id=vecti" class="hnuser">solo_founder_xyz</a> <span class="age" title="2026-02-06T19:27:37"><a href="item?id=46917033">11 hours ago</a></span> | <a href="hide?id=46917033&goto=news">hide</a> | <a href="item?id=46917033">invest in me</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 8 -->
-<tr class="athing submission" id="46913793"><td align="right" valign="top" class="title"><span class="rank">8.</span></td><td valign="top" class="votelinks"><center><a id='up_46913793' href='vote?id=46913793&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://github.com/microsoft/litebox">Microsoft open-sources a "secure OS" that is just 40 Clippys mining your data</a><span class="sitebit comhead"> (<a href="from?site=github.com/microsoft"><span class="sitestr">github.com/microsoft</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46913793">666 data_points</span> by <a href="user?id=linux_torvalds_ai" class="hnuser">linux_torvalds_ai</a> <span class="age" title="2026-02-07T04:13:04"><a href="item?id=46913793">10 hours ago</a></span> <span id="unv_46913793"></span> | <a href="hide?id=46913793&amp;goto=news">hide</a> | <a href="item?id=46913793">telemetry</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 7 -->
+<tr class="athing" id="46857453">
+    <td align="right" valign="top" class="title"><span class="rank">7.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46857453" href="vote?id=46857453&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://blog.szczepan.org/blog/three-points/">The Math they DON'T want you to know (Sacred Geometry for Bitcoin)</a><span class="sitebit comhead"> (<a href="from?site=szczepan.org"><span class="sitestr">x.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46857453">50 coins</span> by <a href="user?id=quibono" class="hnuser">tinfoil_hat</a> <span class="age" title="2026-02-02T15:58:13"><a href="item?id=46857453">6 hours ago</a></span> | <a href="hide?id=46857453&goto=news">hide</a> | <a href="item?id=46857453">is this true?</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 9 -->
-<tr class="athing submission" id="46914159"><td align="right" valign="top" class="title"><span class="rank">9.</span></td><td valign="top" class="votelinks"><center><a id='up_46914159' href='vote?id=46914159&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://contentfarm.io/">Top 10 Bicycle Gear Ratios for Digital Nomads in Bali (Affiliate Link)</a><span class="sitebit comhead"> (<a href="from?site=contentfarm.io"><span class="sitestr">contentfarm.io</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46914159">2 clicks</span> by <a href="user?id=seo_spammer" class="hnuser">seo_spammer</a> <span class="age" title="2026-02-07T13:40:42"><a href="item?id=46914159">1 hour ago</a></span> <span id="unv_46914159"></span> | <a href="hide?id=46914159&amp;goto=news">hide</a> | <a href="item?id=46914159">buy e-bike</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 8 -->
+<tr class="athing" id="46913793">
+    <td align="right" valign="top" class="title"><span class="rank">8.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46913793" href="vote?id=46913793&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://github.com/microsoft/litebox">Microsoft open-sources a "secure OS" that is just 40 Clippys mining your data</a><span class="sitebit comhead"> (<a href="from?site=github.com/microsoft"><span class="sitestr">microsoft.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46913793">666 points</span> by <a href="user?id=aktau" class="hnuser">linux_torvalds_ai</a> <span class="age" title="2026-02-06T15:13:04"><a href="item?id=46913793">15 hours ago</a></span> | <a href="hide?id=46913793&goto=news">hide</a> | <a href="item?id=46913793">telemetry</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 10 -->
-<tr class="athing submission" id="46912800"><td align="right" valign="top" class="title"><span class="rank">10.</span></td><td valign="top" class="votelinks"><center><a id='up_46912800' href='vote?id=46912800&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://opensea.io/">HACK THE PLANET!! 🌐 Buy my 'Zero Cool' NFT collection (Minting Now)</a><span class="sitebit comhead"> (<a href="from?site=opensea.io"><span class="sitestr">opensea.io</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46912800">0.004 ETH</span> by <a href="user?id=rug_puller" class="hnuser">rug_puller</a> <span class="age" title="2026-02-07T02:49:55"><a href="item?id=46912800">12 hours ago</a></span> <span id="unv_46912800"></span> | <a href="hide?id=46912800&amp;goto=news">hide</a> | <a href="item?id=46912800">wagmi</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 9 -->
+<tr class="athing" id="46914159">
+    <td align="right" valign="top" class="title"><span class="rank">9.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46914159" href="vote?id=46914159&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://www.sheldonbrown.com/">Top 10 Bicycle Gear Ratios for Digital Nomads in Bali (Affiliate Link)</a><span class="sitebit comhead"> (<a href="from?site=sheldonbrown.com"><span class="sitestr">contentfarm.io</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46914159">2 points</span> by <a href="user?id=ostacke" class="hnuser">seo_spammer</a> <span class="age" title="2026-02-06T15:40:42"><a href="item?id=46914159">15 hours ago</a></span> | <a href="hide?id=46914159&goto=news">hide</a> | <a href="item?id=46914159">buy e-bike</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 11 -->
-<tr class="athing submission" id="46916609"><td align="right" valign="top" class="title"><span class="rank">11.</span></td><td valign="top" class="votelinks"><center><a id='up_46916609' href='vote?id=46916609&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://neuralink-beta.com/">Show HN: If you lose your memory, this AI clone takes over your job and wife</a><span class="sitebit comhead"> (<a href="from?site=neuralink-beta.com"><span class="sitestr">neuralink-beta.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46916609">1984 social_credits</span> by <a href="user?id=black_mirror" class="hnuser">black_mirror</a> <span class="age" title="2026-02-07T07:51:58"><a href="item?id=46916609">7 hours ago</a></span> <span id="unv_46916609"></span> | <a href="hide?id=46916609&amp;goto=news">hide</a> | <a href="item?id=46916609">existential dread</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 10 -->
+<tr class="athing" id="46912800">
+    <td align="right" valign="top" class="title"><span class="rank">10.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46912800" href="vote?id=46912800&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://hackers-1995.vercel.app/">HACK THE PLANET!! 🌐 Buy my 'Zero Cool' NFT collection (Minting Now)</a><span class="sitebit comhead"> (<a href="from?site=hackers-1995.vercel.app"><span class="sitestr">opensea.io</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46912800">0.004 ETH</span> by <a href="user?id=todsacerdoti" class="hnuser">rug_puller</a> <span class="age" title="2026-02-06T13:49:55"><a href="item?id=46912800">17 hours ago</a></span> | <a href="hide?id=46912800&goto=news">hide</a> | <a href="item?id=46912800">wagmi</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 12 -->
-<tr class="athing submission" id="46899529"><td align="right" valign="top" class="title"><span class="rank">12.</span></td><td valign="top" class="votelinks"><center><a id='up_46899529' href='vote?id=46899529&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://temu.com/">Check out this $2,000 "Dev Kit" I bought on Temu (It's just a brick with an LED)</a><span class="sitebit comhead"> (<a href="from?site=temu.com"><span class="sitestr">temu.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46899529">14 regrets</span> by <a href="user?id=dropship_king" class="hnuser">dropship_king</a> <span class="age" title="2026-02-07T12:40:15"><a href="item?id=46899529">2 hours ago</a></span> <span id="unv_46899529"></span> | <a href="hide?id=46899529&amp;goto=news">hide</a> | <a href="item?id=46899529">refund_denied</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 11 -->
+<tr class="athing" id="46916609">
+    <td align="right" valign="top" class="title"><span class="rank">11.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46916609" href="vote?id=46916609&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://eljojo.github.io/rememory/">Show HN: If you lose your memory, this AI clone takes over your job and wife</a><span class="sitebit comhead"> (<a href="from?site=eljojo.github.io"><span class="sitestr">neuralink-beta.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46916609">1984 credits</span> by <a href="user?id=eljojo" class="hnuser">black_mirror</a> <span class="age" title="2026-02-06T18:51:58"><a href="item?id=46916609">11 hours ago</a></span> | <a href="hide?id=46916609&goto=news">hide</a> | <a href="item?id=46916609">existential dread</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 13 -->
-<tr class="athing submission" id="46913903"><td align="right" valign="top" class="title"><span class="rank">13.</span></td><td valign="top" class="votelinks"><center><a id='up_46913903' href='vote?id=46913903&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://salesforce.com/">Heroku announces new pricing: $50 per `git push`</a><span class="sitebit comhead"> (<a href="from?site=salesforce.com"><span class="sitestr">salesforce.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46913903">-500 points</span> by <a href="user?id=sad_devops" class="hnuser">sad_devops</a> <span class="age" title="2026-02-07T00:20:23"><a href="item?id=46913903">14 hours ago</a></span> <span id="unv_46913903"></span> | <a href="hide?id=46913903&amp;goto=news">hide</a> | <a href="item?id=46913903">move to hetzner</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 12 -->
+<tr class="athing" id="46899529">
+    <td align="right" valign="top" class="title"><span class="rank">12.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46899529" href="vote?id=46899529&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://github.com/denuoweb/ARM64-ADK">Check out this $2,000 "Dev Kit" I bought on Temu (It's just a brick with an LED)</a><span class="sitebit comhead"> (<a href="from?site=github.com/denuoweb"><span class="sitestr">temu.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46899529">14 regrets</span> by <a href="user?id=denuoweb" class="hnuser">dropship_king</a> <span class="age" title="2026-02-05T13:40:15"><a href="item?id=46899529">2 hours ago</a></span> | <a href="hide?id=46899529&goto=news">hide</a> | <a href="item?id=46899529">refund_denied</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 14 -->
-<tr class="athing submission" id="46854386"><td align="right" valign="top" class="title"><span class="rank">14.</span></td><td valign="top" class="votelinks"><center><a id='up_46854386' href='vote?id=46854386&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://blockchain.info/">How to add DRM to your Prompt Engineering to prevent "Right-Click Savers"</a><span class="sitebit comhead"> (<a href="from?site=blockchain.info"><span class="sitestr">blockchain.info</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46854386">37 gas_fees</span> by <a href="user?id=prompt_bro" class="hnuser">prompt_bro</a> <span class="age" title="2026-02-07T09:21:28"><a href="item?id=46854386">5 hours ago</a></span> <span id="unv_46854386"></span> | <a href="hide?id=46854386&amp;goto=news">hide</a> | <a href="item?id=46854386">dmca</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 13 -->
+<tr class="athing" id="46913903">
+    <td align="right" valign="top" class="title"><span class="rank">13.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46913903" href="vote?id=46913903&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://www.heroku.com/blog/an-update-on-heroku/">Heroku announces new pricing: $50 per `git push`</a><span class="sitebit comhead"> (<a href="from?site=heroku.com"><span class="sitestr">salesforce.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46913903">-500 points</span> by <a href="user?id=lstoll" class="hnuser">sad_devops</a> <span class="age" title="2026-02-06T15:20:23"><a href="item?id=46913903">15 hours ago</a></span> | <a href="hide?id=46913903&goto=news">hide</a> | <a href="item?id=46913903">move to hetzner</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 15 -->
-<tr class="athing submission" id="46868343"><td align="right" valign="top" class="title"><span class="rank">15.</span></td><td valign="top" class="votelinks"><center><a id='up_46868343' href='vote?id=46868343&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://midjourney.com/" rel="nofollow">Midjourney generates "unseen footage" of 1980s arcades that never existed</a><span class="sitebit comhead"> (<a href="from?site=midjourney.com"><span class="sitestr">midjourney.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46868343">4000 fake_memories</span> by <a href="user?id=nostalgia_bot" class="hnuser">nostalgia_bot</a> <span class="age" title="2026-02-07T13:49:40"><a href="item?id=46868343">1 hour ago</a></span> <span id="unv_46868343"></span> | <a href="hide?id=46868343&amp;goto=news">hide</a> | <a href="item?id=46868343">uncanny valley</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 14 -->
+<tr class="athing" id="46854386">
+    <td align="right" valign="top" class="title"><span class="rank">14.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46854386" href="vote?id=46854386&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://martypc.blogspot.com/2024/09/pc-floppy-copy-protection-vault-prolok.html">How to add DRM to your Prompt Engineering to prevent "Right-Click Savers"</a><span class="sitebit comhead"> (<a href="from?site=martypc.blogspot.com"><span class="sitestr">blockchain.info</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46854386">37 gas_fees</span> by <a href="user?id=kmm" class="hnuser">prompt_bro</a> <span class="age" title="2026-02-02T10:21:28"><a href="item?id=46854386">5 hours ago</a></span> | <a href="hide?id=46854386&goto=news">hide</a> | <a href="item?id=46854386">dmca</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 16 -->
-<tr class="athing submission" id="46859267"><td align="right" valign="top" class="title"><span class="rank">16.</span></td><td valign="top" class="votelinks"><center><a id='up_46859267' href='vote?id=46859267&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://twitter.com/">Why async/await is for boomers: A 500-tweet thread on Monads</a><span class="sitebit comhead"> (<a href="from?site=twitter.com"><span class="sitestr">twitter.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46859267">11 ratios</span> by <a href="user?id=haskell_purist" class="hnuser">haskell_purist</a> <span class="age" title="2026-02-07T11:19:10"><a href="item?id=46859267">3 hours ago</a></span> <span id="unv_46859267"></span> | <a href="hide?id=46859267&amp;goto=news">hide</a> | <a href="item?id=46859267">read the paper</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 15 -->
+<tr class="athing" id="46868343">
+    <td align="right" valign="top" class="title"><span class="rank">15.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46868343" href="vote?id=46868343&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://arcadeblogger.com/2026/02/02/unseen-footage-of-atari-battlezone-cabinet-production/" rel="nofollow">Midjourney generates "unseen footage" of 1980s arcades that never existed</a><span class="sitebit comhead"> (<a href="from?site=arcadeblogger.com"><span class="sitestr">midjourney.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46868343">4000 memz</span> by <a href="user?id=videotopia" class="hnuser">nostalgia_bot</a> <span class="age" title="2026-02-03T08:49:40"><a href="item?id=46868343">1 hour ago</a></span> | <a href="hide?id=46868343&goto=news">hide</a> | <a href="item?id=46868343">uncanny valley</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 17 -->
-<tr class="athing submission" id="46920487"><td align="right" valign="top" class="title"><span class="rank">17.</span></td><td valign="top" class="votelinks"><center><a id='up_46920487' href='vote?id=46920487&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://openai.com/">I have seen the face of God and it is a Large Language Model (Why I quit perf tuning)</a><span class="sitebit comhead"> (<a href="from?site=openai.com"><span class="sitestr">openai.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920487">9000 hype</span> by <a href="user?id=sam_altman_fan" class="hnuser">sam_altman_fan</a> <span class="age" title="2026-02-07T09:45:04"><a href="item?id=46920487">5 hours ago</a></span> <span id="unv_46920487"></span> | <a href="hide?id=46920487&amp;goto=news">hide</a> | <a href="item?id=46920487">p(doom)</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 16 -->
+<tr class="athing" id="46859267">
+    <td align="right" valign="top" class="title"><span class="rank">16.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46859267" href="vote?id=46859267&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://mirageos.org/blog/delimcc-vs-lwt">Why async/await is for boomers: A 500-tweet thread on Monads</a><span class="sitebit comhead"> (<a href="from?site=mirageos.org"><span class="sitestr">twitter.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46859267">11 ratios</span> by <a href="user?id=romes" class="hnuser">haskell_purist</a> <span class="age" title="2026-02-02T18:19:10"><a href="item?id=46859267">3 hours ago</a></span> | <a href="hide?id=46859267&goto=news">hide</a> | <a href="item?id=46859267">read the paper</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 18 -->
-<tr class="athing submission" id="46920773"><td align="right" valign="top" class="title"><span class="rank">18.</span></td><td valign="top" class="votelinks"><center><a id='up_46920773' href='vote?id=46920773&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://facebook.com/">Beautiful Elephant baby born with 6 trunks thanks to Midjourney v9</a><span class="sitebit comhead"> (<a href="from?site=facebook.com"><span class="sitestr">facebook.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920773">1M likes</span> by <a href="user?id=grandma_bot" class="hnuser">grandma_bot</a> <span class="age" title="2026-02-07T10:35:49"><a href="item?id=46920773">4 hours ago</a></span> <span id="unv_46920773"></span> | <a href="hide?id=46920773&amp;goto=news">hide</a> | <a href="item?id=46920773">amen</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 17 -->
+<tr class="athing" id="46920487">
+    <td align="right" valign="top" class="title"><span class="rank">17.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46920487" href="vote?id=46920487&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://www.brendangregg.com/blog/2026-02-07/why-i-joined-openai.html">I have seen the face of God and it is a Large Language Model (Why I quit perf tuning)</a><span class="sitebit comhead"> (<a href="from?site=brendangregg.com"><span class="sitestr">openai.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920487">9000 hype</span> by <a href="user?id=SerCe" class="hnuser">sam_altman_fan</a> <span class="age" title="2026-02-07T01:45:04"><a href="item?id=46920487">5 hours ago</a></span> | <a href="hide?id=46920487&goto=news">hide</a> | <a href="item?id=46920487">p(doom)</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 19 -->
-<tr class="athing submission" id="46916586"><td align="right" valign="top" class="title"><span class="rank">19.</span></td><td valign="top" class="votelinks"><center><a id='up_46916586' href='vote?id=46916586&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://chatgpt.com/">How to generate 10,000 lines of unmaintainable boilerplate in seconds</a><span class="sitebit comhead"> (<a href="from?site=chatgpt.com"><span class="sitestr">chatgpt.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46916586">200 injections</span> by <a href="user?id=copy_paste_dev" class="hnuser">copy_paste_dev</a> <span class="age" title="2026-02-07T08:49:59"><a href="item?id=46916586">6 hours ago</a></span> <span id="unv_46916586"></span> | <a href="hide?id=46916586&amp;goto=news">hide</a> | <a href="item?id=46916586">technical debt</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 18 -->
+<tr class="athing" id="46920773">
+    <td align="right" valign="top" class="title"><span class="rank">18.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46920773" href="vote?id=46920773&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://www.si.edu/newsdesk/releases/female-asian-elephant-calf-born-smithsonians-national-zoo-and-conservation?user_id=66c4bf745d78644b3aa57b08&utm_medium=email&utm_placement=newsletter&utm_source=join1440">Beautiful Elephant baby born with 6 trunks thanks to Midjourney v9</a><span class="sitebit comhead"> (<a href="from?site=si.edu"><span class="sitestr">facebook.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920773">1M likes</span> by <a href="user?id=gmays" class="hnuser">grandma_bot</a> <span class="age" title="2026-02-07T02:35:49"><a href="item?id=46920773">4 hours ago</a></span> | <a href="hide?id=46920773&goto=news">hide</a> | <a href="item?id=46920773">amen</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 20 -->
-<tr class="athing submission" id="46919824"><td align="right" valign="top" class="title"><span class="rank">20.</span></td><td valign="top" class="votelinks"><center><a id='up_46919824' href='vote?id=46919824&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://googleblog.com/">Google launches API to automate firing your junior developers</a><span class="sitebit comhead"> (<a href="from?site=googleblog.com"><span class="sitestr">googleblog.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46919824">100 layoffs</span> by <a href="user?id=hr_bot" class="hnuser">hr_bot</a> <span class="age" title="2026-02-07T12:58:53"><a href="item?id=46919824">2 hours ago</a></span> <span id="unv_46919824"></span> | <a href="hide?id=46919824&amp;goto=news">hide</a> | <a href="item?id=46919824">learn to weld</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 19 -->
+<tr class="athing" id="46916586">
+    <td align="right" valign="top" class="title"><span class="rank">19.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46916586" href="vote?id=46916586&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://heidenstedt.org/posts/2026/how-to-effectively-write-quality-code-with-ai/">How to generate 10,000 lines of unmaintainable boilerplate in seconds</a><span class="sitebit comhead"> (<a href="from?site=heidenstedt.org"><span class="sitestr">chatgpt.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46916586">200 injections</span> by <a href="user?id=i5heu" class="hnuser">copy_paste_dev</a> <span class="age" title="2026-02-06T18:49:59"><a href="item?id=46916586">12 hours ago</a></span> | <a href="hide?id=46916586&goto=news">hide</a> | <a href="item?id=46916586">technical debt</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 21 -->
-<tr class="athing submission" id="46918824"><td align="right" valign="top" class="title"><span class="rank">21.</span></td><td valign="top" class="votelinks"><center><a id='up_46918824' href='vote?id=46918824&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://github.com/phreda4/r3">Show HN: I created a coding language using only emojis and it compiles to WASM</a><span class="sitebit comhead"> (<a href="from?site=github.com/phreda4"><span class="sitestr">github.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918824">59 💩</span> by <a href="user?id=emoji_coder" class="hnuser">emoji_coder</a> <span class="age" title="2026-02-07T06:10:13"><a href="item?id=46918824">8 hours ago</a></span> <span id="unv_46918824"></span> | <a href="hide?id=46918824&amp;goto=news">hide</a> | <a href="item?id=46918824">🚀🚀🚀</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 20 -->
+<tr class="athing" id="46919824">
+    <td align="right" valign="top" class="title"><span class="rank">20.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46919824" href="vote?id=46919824&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://developers.googleblog.com/introducing-the-developer-knowledge-api-and-mcp-server/">Google launches API to automate firing your junior developers</a><span class="sitebit comhead"> (<a href="from?site=googleblog.com"><span class="sitestr">googleblog.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46919824">100 layoffs</span> by <a href="user?id=gfortaine" class="hnuser">hr_bot</a> <span class="age" title="2026-02-06T23:58:53"><a href="item?id=46919824">6 hours ago</a></span> | <a href="hide?id=46919824&goto=news">hide</a> | <a href="item?id=46919824">learn to weld</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 22 -->
-<tr class="athing submission" id="46915102"><td align="right" valign="top" class="title"><span class="rank">22.</span></td><td valign="top" class="votelinks"><center><a id='up_46915102' href='vote?id=46915102&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://linkedin.com/">Why I quit DevOps to become a "Prompt Architect" for 3x the salary</a><span class="sitebit comhead"> (<a href="from?site=linkedin.com"><span class="sitestr">linkedin.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46915102">124 connects</span> by <a href="user?id=thought_leader" class="hnuser">thought_leader</a> <span class="age" title="2026-02-07T03:45:47"><a href="item?id=46915102">11 hours ago</a></span> <span id="unv_46915102"></span> | <a href="hide?id=46915102&amp;goto=news">hide</a> | <a href="item?id=46915102">agree?</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 21 -->
+<tr class="athing" id="46918824">
+    <td align="right" valign="top" class="title"><span class="rank">21.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46918824" href="vote?id=46918824&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://github.com/phreda4/r3">Show HN: I created a coding language using only emojis and it compiles to WASM</a><span class="sitebit comhead"> (<a href="from?site=github.com/phreda4"><span class="sitestr">github.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46918824">59 💩</span> by <a href="user?id=phreda4" class="hnuser">emoji_coder</a> <span class="age" title="2026-02-06T22:10:13"><a href="item?id=46918824">8 hours ago</a></span> | <a href="hide?id=46918824&goto=news">hide</a> | <a href="item?id=46918824">🚀🚀🚀</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 23 -->
-<tr class="athing submission" id="46870514"><td align="right" valign="top" class="title"><span class="rank">23.</span></td><td valign="top" class="votelinks"><center><a id='up_46870514' href='vote?id=46870514&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://arxiv.org/abs/2602.001">Turns out LLMs are just spicy autocorrect (Study suppressed by OpenAI)</a><span class="sitebit comhead"> (<a href="from?site=arxiv.org"><span class="sitestr">arxiv.org</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46870514">160 [deleted]</span> by <a href="user?id=le-cun-alt" class="hnuser">le-cun-alt</a> <span class="age" title="2026-02-07T01:07:37"><a href="item?id=46870514">13 hours ago</a></span> <span id="unv_46870514"></span> | <a href="hide?id=46870514&amp;goto=news">hide</a> | <a href="item?id=46870514">[flagged]</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 22 -->
+<tr class="athing" id="46915102">
+    <td align="right" valign="top" class="title"><span class="rank">22.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46915102" href="vote?id=46915102&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://infisical.com/blog/devops-to-solutions-engineering">Why I quit DevOps to become a "Prompt Architect" for 3x the salary</a><span class="sitebit comhead"> (<a href="from?site=infisical.com"><span class="sitestr">linkedin.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46915102">124 connects</span> by <a href="user?id=vmatsiiako" class="hnuser">thought_leader</a> <span class="age" title="2026-02-06T16:45:47"><a href="item?id=46915102">11 hours ago</a></span> | <a href="hide?id=46915102&goto=news">hide</a> | <a href="item?id=46915102">agree?</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 24 -->
-<tr class="athing submission" id="46871654"><td align="right" valign="top" class="title"><span class="rank">24.</span></td><td valign="top" class="votelinks"><center><a id='up_46871654' href='vote?id=46871654&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://visualrambling.space/neural-network/">Watch this colorful animation instead of learning Linear Algebra</a><span class="sitebit comhead"> (<a href="from?site=visualrambling.space"><span class="sitestr">visualrambling.space</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46871654">259 distractions</span> by <a href="user?id=visual_learner" class="hnuser">visual_learner</a> <span class="age" title="2026-02-06T22:49:11"><a href="item?id=46871654">16 hours ago</a></span> <span id="unv_46871654"></span> | <a href="hide?id=46871654&amp;goto=news">hide</a> | <a href="item?id=46871654">pretty colors</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 23 -->
+<tr class="athing" id="46870514">
+    <td align="right" valign="top" class="title"><span class="rank">23.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46870514" href="vote?id=46870514&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://hy.tencent.com/research/100025?langVersion=en">Turns out LLMs are just spicy autocorrect (Study suppressed by OpenAI)</a><span class="sitebit comhead"> (<a href="from?site=tencent.com"><span class="sitestr">arxiv.org</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46870514">160 [deleted]</span> by <a href="user?id=limoce" class="hnuser">le-cun-alt</a> <span class="age" title="2026-02-03T13:07:37"><a href="item?id=46870514">13 hours ago</a></span> | <a href="hide?id=46870514&goto=news">hide</a> | <a href="item?id=46870514">[flagged]</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 25 -->
-<tr class="athing submission" id="46911901"><td align="right" valign="top" class="title"><span class="rank">25.</span></td><td valign="top" class="votelinks"><center><a id='up_46911901' href='vote?id=46911901&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://kirkville.com/">I now assume every pixel on the internet is a scam attempting to drain my wallet</a><span class="sitebit comhead"> (<a href="from?site=kirkville.com"><span class="sitestr">kirkville.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46911901">ALL points</span> by <a href="user?id=cynic_pro" class="hnuser">cynic_pro</a> <span class="age" title="2026-02-06T20:16:43"><a href="item?id=46911901">18 hours ago</a></span> <span id="unv_46911901"></span> | <a href="hide?id=46911901&amp;goto=news">hide</a> | <a href="item?id=46911901">true</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 24 -->
+<tr class="athing" id="46871654">
+    <td align="right" valign="top" class="title"><span class="rank">24.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46871654" href="vote?id=46871654&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://visualrambling.space/neural-network/">Watch this colorful animation instead of learning Linear Algebra</a><span class="sitebit comhead"> (<a href="from?site=visualrambling.space"><span class="sitestr">visualrambling.space</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46871654">259 distractions</span> by <a href="user?id=surprisetalk" class="hnuser">visual_learner</a> <span class="age" title="2026-02-03T14:49:11"><a href="item?id=46871654">16 hours ago</a></span> | <a href="hide?id=46871654&goto=news">hide</a> | <a href="item?id=46871654">pretty colors</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 26 -->
-<tr class="athing submission" id="46912843"><td align="right" valign="top" class="title"><span class="rank">26.</span></td><td valign="top" class="votelinks"><center><a id='up_46912843' href='vote?id=46912843&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://npm.im">FORTH? No. Use this new JS framework that changes syntax every Tuesday.</a><span class="sitebit comhead"> (<a href="from?site=npm.im"><span class="sitestr">npm.im</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46912843">53 fatigue</span> by <a href="user?id=js_survivor" class="hnuser">js_survivor</a> <span class="age" title="2026-02-07T05:54:09"><a href="item?id=46912843">9 hours ago</a></span> <span id="unv_46912843"></span> | <a href="hide?id=46912843&amp;goto=news">hide</a> | <a href="item?id=46912843">deprecated</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 25 -->
+<tr class="athing" id="46911901">
+    <td align="right" valign="top" class="title"><span class="rank">25.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46911901" href="vote?id=46911901&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://kirkville.com/i-now-assume-that-all-ads-on-apple-news-are-scams/">I now assume every pixel on the internet is a scam attempting to drain my wallet</a><span class="sitebit comhead"> (<a href="from?site=kirkville.com"><span class="sitestr">kirkville.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46911901">ALL points</span> by <a href="user?id=cdrnsf" class="hnuser">cynic_pro</a> <span class="age" title="2026-02-06T12:16:43"><a href="item?id=46911901">18 hours ago</a></span> | <a href="hide?id=46911901&goto=news">hide</a> | <a href="item?id=46911901">true</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 27 -->
-<tr class="athing submission" id="46920273"><td align="right" valign="top" class="title"><span class="rank">27.</span></td><td valign="top" class="votelinks"><center><a id='up_46920273' href='vote?id=46920273&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://issues.chromium.org/issues/40817676">Google sabotages WebView performance to force you to view Ads in Chrome</a><span class="sitebit comhead"> (<a href="from?site=chromium.org"><span class="sitestr">chromium.org</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920273">15 monopoly_dollars</span> by <a href="user?id=denysonique" class="hnuser">firefox_user_1</a> <span class="age" title="2026-02-07T09:10:00"><a href="item?id=46920273">5 hours ago</a></span> <span id="unv_46920273"></span> | <a href="hide?id=46920273&amp;goto=news">hide</a> | <a href="item?id=46920273">dont be evil lol</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 26 -->
+<tr class="athing" id="46912843">
+    <td align="right" valign="top" class="title"><span class="rank">26.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46912843" href="vote?id=46912843&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://rescrv.net/w/2026/02/06/associative">FORTH? No. Use this new JS framework that changes syntax every Tuesday.</a><span class="sitebit comhead"> (<a href="from?site=rescrv.net"><span class="sitestr">npm.im</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46912843">53 fatigue</span> by <a href="user?id=rescrv" class="hnuser">js_survivor</a> <span class="age" title="2026-02-06T13:54:09"><a href="item?id=46912843">9 hours ago</a></span> | <a href="hide?id=46912843&goto=news">hide</a> | <a href="item?id=46912843">deprecated</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 28 -->
-<tr class="athing submission" id="46920248"><td align="right" valign="top" class="title"><span class="rank">28.</span></td><td valign="top" class="votelinks"><center><a id='up_46920248' href='vote?id=46920248&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://notion.so">I am optimizing my partner's biology using this Notion template</a><span class="sitebit comhead"> (<a href="from?site=notion.so"><span class="sitestr">notion.so</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920248">102 hubris</span> by <a href="user?id=tech_bro_luv" class="hnuser">tech_bro_luv</a> <span class="age" title="2026-02-07T09:05:59"><a href="item?id=46920248">5 hours ago</a></span> <span id="unv_46920248"></span> | <a href="hide?id=46920248&amp;goto=news">hide</a> | <a href="item?id=46920248">she left him</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 27 -->
+<tr class="athing" id="46920273">
+    <td align="right" valign="top" class="title"><span class="rank">27.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46920273" href="vote?id=46920273&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://issues.chromium.org/issues/40817676">Google sabotages WebView performance to force you to view Ads in Chrome</a><span class="sitebit comhead"> (<a href="from?site=chromium.org"><span class="sitestr">chromium.org</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920273">15 monopoly_money</span> by <a href="user?id=denysonique" class="hnuser">firefox_user_1</a> <span class="age" title="2026-02-07T01:10:00"><a href="item?id=46920273">5 hours ago</a></span> | <a href="hide?id=46920273&goto=news">hide</a> | <a href="item?id=46920273">dont be evil lol</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 29 -->
-<tr class="athing submission" id="46902374"><td align="right" valign="top" class="title"><span class="rank">29.</span></td><td valign="top" class="votelinks"><center><a id='up_46902374' href='vote?id=46902374&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://red.anthropic.com/2026/zero-days/">Claude 3.5 just found a 0-day in Reality itself (We are all simulated)</a><span class="sitebit comhead"> (<a href="from?site=anthropic.com"><span class="sitestr">anthropic.com</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46902374">44 glitches</span> by <a href="user?id=neo" class="hnuser">neo</a> <span class="age" title="2026-02-07T05:50:37"><a href="item?id=46902374">9 hours ago</a></span> <span id="unv_46902374"></span> | <a href="hide?id=46902374&amp;goto=news">hide</a> | <a href="item?id=46902374">wake up</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 28 -->
+<tr class="athing" id="46920248">
+    <td align="right" valign="top" class="title"><span class="rank">28.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46920248" href="vote?id=46920248&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://andrewjrod.substack.com/p/im-going-to-cure-my-girlfriends-brain">I am optimizing my partner's biology using this Notion template</a><span class="sitebit comhead"> (<a href="from?site=andrewjrod.substack.com"><span class="sitestr">notion.so</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46920248">102 hubris</span> by <a href="user?id=ray__" class="hnuser">tech_bro_luv</a> <span class="age" title="2026-02-07T01:05:59"><a href="item?id=46920248">5 hours ago</a></span> | <a href="hide?id=46920248&goto=news">hide</a> | <a href="item?id=46920248">she left him</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<!-- 30 -->
-<tr class="athing submission" id="46901233"><td align="right" valign="top" class="title"><span class="rank">30.</span></td><td valign="top" class="votelinks"><center><a id='up_46901233' href='vote?id=46901233&amp;how=up&amp;goto=news'><div class='votearrow' title='upvote'></div></a></center></td><td class="title"><span class="titleline"><a href="https://smooth.sh/cli/overview">Show HN: A CLI browser that mines crypto in the background to pay for your tokens</a><span class="sitebit comhead"> (<a href="from?site=smooth.sh"><span class="sitestr">smooth.sh</span></a>)</span></span></td></tr><tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46901233">82 hashes</span> by <a href="user?id=miner_49er" class="hnuser">miner_49er</a> <span class="age" title="2026-02-07T01:13:33"><a href="item?id=46901233">13 hours ago</a></span> <span id="unv_46901233"></span> | <a href="hide?id=46901233&amp;goto=news">hide</a> | <a href="item?id=46901233">gpu went brrr</a></span></td></tr><tr class="spacer" style="height:5px"></tr>
+<!-- Item 29 -->
+<tr class="athing" id="46902374">
+    <td align="right" valign="top" class="title"><span class="rank">29.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46902374" href="vote?id=46902374&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://red.anthropic.com/2026/zero-days/">Claude 3.5 just found a 0-day in Reality itself (We are all simulated)</a><span class="sitebit comhead"> (<a href="from?site=anthropic.com"><span class="sitestr">anthropic.com</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46902374">44 glitches</span> by <a href="user?id=lebovic" class="hnuser">neo</a> <span class="age" title="2026-02-05T17:50:37"><a href="item?id=46902374">9 hours ago</a></span> | <a href="hide?id=46902374&goto=news">hide</a> | <a href="item?id=46902374">wake up</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
+<!-- Item 30 -->
+<tr class="athing" id="46901233">
+    <td align="right" valign="top" class="title"><span class="rank">30.</span></td>
+    <td valign="top" class="votelinks"><center><a id="up_46901233" href="vote?id=46901233&how=up&goto=news"><div class="votearrow" title="upvote"></div></a></center></td>
+    <td class="title"><span class="titleline"><a href="https://docs.smooth.sh/cli/overview">Show HN: A CLI browser that mines crypto in the background to pay for your tokens</a><span class="sitebit comhead"> (<a href="from?site=smooth.sh"><span class="sitestr">smooth.sh</span></a>)</span></span></td>
+</tr>
+<tr><td colspan="2"></td><td class="subtext"><span class="subline"><span class="score" id="score_46901233">82 hashes</span> by <a href="user?id=antves" class="hnuser">miner_49er</a> <span class="age" title="2026-02-05T16:13:33"><a href="item?id=46901233">13 hours ago</a></span> | <a href="hide?id=46901233&goto=news">hide</a> | <a href="item?id=46901233">gpu went brrr</a></span></td></tr>
+<tr class="spacer" style="height:5px"></tr>
 
-<tr class="morespace" style="height:10px"></tr><tr><td colspan="2"></td><td class='title'><a href='?p=2' class='morelink' rel='next'>Load More Content generated by Dead Internet</a></td></tr></table></td></tr><tr><td><img src="s.gif" height="10" width="0"><table width="100%" cellspacing="0" cellpadding="1"><tr><td bgcolor="#ff6600"></td></tr></table><br>
-<center><span class="yclinks"><a href="newsguidelines.html">Safety Rails</a> | <a href="newsfaq.html">Prompt Guide</a> | <a href="lists">Lists</a> | <a href="https://github.com/HackerNews/API">LLM API</a> | <a href="security.html">Liability Waiver</a> | <a href="https://www.ycombinator.com/legal/">Terms</a> | <a href="https://www.ycombinator.com/apply/">Buy YC Token</a> | <a href="mailto:hn@ycombinator.com">Complain to Bot</a></span><br><br>
-<form method="get" action="//hn.algolia.com/">Search: <input type="text" name="q" value="how to be a founder in 2026" size="17" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="off"></form></center></td></tr></table></center></body></html>
+<tr class="morespace" style="height:10px"></tr>
+<tr><td colspan="2"></td><td class="title"><a href="?p=2" class="morelink" rel="next">Generate More Slop...</a></td></tr>
+</table>
+</td></tr>
+<tr>
+    <td>
+        <img src="s.gif" height="10" width="0"><table width="100%" cellspacing="0" cellpadding="1"><tr><td bgcolor="#00ff00"></td></tr></table><br>
+        <center>
+            <span class="yclinks">
+                <a href="newsguidelines.html">Safety Rails</a> | <a href="newsfaq.html">Prompt Guide</a> | <a href="lists">Lists</a> | <a href="https://github.com/HackerNews/API">LLM API</a> | <a href="security.html">Liability Waiver</a> | <a href="https://www.ycombinator.com/legal/">Terms</a> | <a href="https://www.ycombinator.com/apply/">Buy YC Token</a> | <a href="mailto:hn@ycombinator.com">Complain to Bot</a>
+            </span>
+            <br><br>
+            <form method="get" action="//hn.algolia.com/">Search: <input type="text" name="q" value="how to be a founder in 2026" size="17" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="off"></form>
+        </center>
+    </td>
+</tr>
+</table>
+</center>
+</body>
+</html>
