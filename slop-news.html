@@ -49,12 +49,23 @@
     .spacer { height: 5px !important; }
     .morelink { font-family: Verdana, Geneva, sans-serif; font-size: 10pt; color: #828282; text-decoration: none; }
 
+    @keyframes rainbow-waterfall {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 200%; }
+    }
+
     @media (prefers-color-scheme: dark) {
         body { background-color: #1a1a1a; color: #bfbfbf; }
         #hnmain { background-color: #202020; }
         a:link, a:visited { color: #e0e0e0; }
         .subtext, .comhead, .subtext a, .comhead a { color: #777; }
         .rank { color: #ff6600; }
+        .votearrow {
+            background: linear-gradient(180deg, #ff0000, #ff7700, #ffff00, #00ff00, #00ffff, #0077ff, #aa00ff, #ff00ff, #ff0000) !important;
+            background-size: 10px 300% !important;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: rainbow-waterfall 1.5s linear infinite;
+        }
     }
     @media only screen and (max-width : 750px) { #hnmain { width: 100%; } }
 </style>
