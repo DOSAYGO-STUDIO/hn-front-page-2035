@@ -387,7 +387,7 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             var hue = ((i + offset) % n) * (360 / n);
             arrows[i].style.background = 'hsl(' + hue + ',100%,55%)';
         }
-        offset = (offset + 1) % n;
+        offset = (offset - 1 + n) % n;
     }
     tick();
     setInterval(tick, 150);
