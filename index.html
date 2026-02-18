@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HN Front Page 2035</title>
+  <meta name="description" content="A directory of alternate Hacker News front pages from the hn-front-page-2035 project.">
+  <style>
+    :root {
+      --bg: #f6f1e6;
+      --paper: #fffdf7;
+      --ink: #1d1a16;
+      --muted: #5f574d;
+      --accent: #ff6600;
+      --accent-dark: #b74600;
+      --line: #d9c9ae;
+      --shadow: 0 18px 38px rgba(73, 45, 18, 0.14);
+      --font-display: "Rockwell", "Georgia Pro", "Palatino Linotype", serif;
+      --font-body: "Charter", "Book Antiqua", "Palatino Linotype", serif;
+      --font-meta: "Courier", "Courier New", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 18%, #fff4dc 0%, transparent 40%),
+        radial-gradient(circle at 88% 88%, #ffe8d4 0%, transparent 36%),
+        linear-gradient(170deg, #f9f4e9 0%, #efe3cf 100%);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: min(1040px, 92vw);
+      margin: 40px auto 56px;
+    }
+
+    .hero {
+      background: linear-gradient(110deg, #fffefb 0%, #fff7ea 52%, #ffe7cd 100%);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "2035";
+      position: absolute;
+      right: 20px;
+      top: -4px;
+      font-family: var(--font-display);
+      font-size: clamp(58px, 13vw, 128px);
+      line-height: 1;
+      color: rgba(183, 70, 0, 0.08);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .label {
+      display: inline-block;
+      font-family: var(--font-meta);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-dark);
+      border: 1px solid #efc9a3;
+      background: #fff2e5;
+      border-radius: 999px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.02;
+      letter-spacing: 0.01em;
+      max-width: 16ch;
+    }
+
+    .lede {
+      margin: 12px 0 0;
+      max-width: 64ch;
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .grid {
+      margin-top: 26px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(38, 28, 16, 0.12);
+      border-color: #c6a982;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 23px;
+      line-height: 1.15;
+    }
+
+    .card p {
+      margin: 10px 0 14px;
+      color: var(--muted);
+      line-height: 1.35;
+      min-height: 72px;
+    }
+
+    .meta {
+      font-family: var(--font-meta);
+      font-size: 12px;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .cta {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(180deg, #ff812e 0%, var(--accent) 100%);
+      border: 1px solid #ce4f00;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .cta:hover { filter: saturate(1.08) brightness(1.02); }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #786f63;
+      font-family: var(--font-meta);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+      .wrap { margin-top: 22px; }
+      .hero { padding: 24px 18px; border-radius: 16px; }
+      .card p { min-height: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <span class="label">Project Directory</span>
+      <h1>HN Front Page 2035</h1>
+      <p class="lede">A set of Hacker News parody front pages that remix the same ecosystem into different tones: straight-faced futurecasting, blunt honesty, savage snark, all-caps tabloid energy, and full AI-content-farm chaos.</p>
+    </section>
+
+    <section class="grid" aria-label="Page list">
+      <article class="card">
+        <div class="meta">Original-style future feed</div>
+        <h2>Hacker News</h2>
+        <p>Closest to classic HN presentation, but with 2035-flavored submissions about space tech, Rust, and synthetic media futures.</p>
+        <a class="cta" href="news.html">Open `news.html`</a>
+      </article>
+
+      <article class="card">
+        <div class="meta">Honest Edition</div>
+        <h2>Honest Hacker News</h2>
+        <p>Normal HN layout with euphemisms stripped out. Headlines are blunt summaries of what posts and comment threads are really about.</p>
+        <a class="cta" href="news-honest.html">Open `news-honest.html`</a>
+      </article>
+
+      <article class="card">
+        <div class="meta">Snapshot - 2025-01-27</div>
+        <h2>Honest Edition (Jan 27)</h2>
+        <p>A date-stamped snapshot of the Honest format with the same idea applied to a specific feed capture and headline set.</p>
+        <a class="cta" href="news-honest-2025-01-27.html">Open `news-honest-2025-01-27.html`</a>
+      </article>
+
+      <article class="card">
+        <div class="meta">Savage Edition - 2025-01-27</div>
+        <h2>Savage Mode</h2>
+        <p>A sharper, roast-heavy rewrite of the Jan 27 snapshot. Same stories, much harsher voice and deliberately combative UI tone.</p>
+        <a class="cta" href="news-honest-2025-01-27-2.html">Open `news-honest-2025-01-27-2.html`</a>
+      </article>
+
+      <article class="card">
+        <div class="meta">All-caps tabloid</div>
+        <h2>THE ABSOLUTE STATE</h2>
+        <p>Hyperbolic clickbait reinterpretation with urgency-red styling, maximal punctuation, and "the internet is ending" energy.</p>
+        <a class="cta" href="news-max.html">Open `news-max.html`</a>
+      </article>
+
+      <article class="card">
+        <div class="meta">Content-farm dystopia</div>
+        <h2>Slop News</h2>
+        <p>A full parody of AI growth-hack culture: noisy gradients, meme metrics, bait titles, and engagement-first nonsense.</p>
+        <a class="cta" href="slop-news.html">Open `slop-news.html`</a>
+      </article>
+    </section>
+
+    <footer>GitHub Pages entry point for `hn-front-page-2035`</footer>
+  </main>
+</body>
+</html>
